@@ -1122,10 +1122,12 @@ body.music-landing-page {
 
 .feature-img {
 	display: block;
+	background-color: #000000;
 	max-width: 100%;
 	text-align: center;
 	line-height: 0;
 	margin: 0px auto 0px;
+	padding: 12px;
 }
 .feature-img + .article {
 	margin-top: 24px;
@@ -1137,6 +1139,7 @@ body.music-landing-page {
 .feature-img.banner-img {
 	display: flex;
 	align-items: center;
+	padding: 0px;
 }
 .banner-img {
 	display: block;
@@ -1587,7 +1590,7 @@ html[xmlns] .slides {
 
 .sidebar {
 	background-color: #000000;
-	margin: 0px;
+	margin: 24px 0px;
 	padding: 24px;
 	box-sizing: border-box;
 }
