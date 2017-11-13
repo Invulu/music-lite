@@ -16,7 +16,7 @@
 		<!-- BEGIN .article -->
 		<article class="article">
 
-			<?php if ( ! has_post_thumbnail() || '' == get_theme_mod( 'display_img_title_post', '1' )  ) { ?>
+			<?php if ( ! has_post_thumbnail() ) { ?>
 				<h1 class="headline"><?php the_title(); ?></h1>
 			<?php } ?>
 

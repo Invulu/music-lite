@@ -54,41 +54,6 @@
 
 	}
 
-	/* Flexslider ---------------------*/
-	function flexSliderSetup() {
-		if( ($).flexslider) {
-			var slider = $('.flexslider');
-			slider.flexslider({
-				slideshowSpeed		: slider.attr('data-speed'),
-				animationDuration	: 800,
-				animation			: slider.attr('data-transition'),
-				video				: false,
-				useCSS				: false,
-				prevText			: '<i class="fa fa-angle-left"></i>',
-				nextText			: '<i class="fa fa-angle-right"></i>',
-				touch				: false,
-				controlNav			: false,
-				animationLoop		: true,
-				smoothHeight		: true,
-				pauseOnAction		: true,
-				pauseOnHover		: true,
-
-				start: function(slider) {
-					slider.removeClass('loading');
-					$( ".preloader" ).hide();
-				}
-			});
-		}
-	}
-
-	/* Masonry ---------------------*/
-	function masonrySetup() {
-		var $container = $('.portfolio-projects, .testimonial-posts');
-		$container.masonry({
-			itemSelector : '.single, .half, .third, .fourth'
-		});
-	}
-
 	function modifyPosts() {
 
 		/* Toggle Mobile Menu Icon ---------------------*/
@@ -135,10 +100,5 @@
 	.ready( menuOffset )
 	.ready( modifyPosts )
 	.on( 'post-load', modifyPosts );
-
-	$( window )
-	.load( flexSliderSetup )
-	.load( masonrySetup )
-	.resize( masonrySetup );
 
 })( jQuery );

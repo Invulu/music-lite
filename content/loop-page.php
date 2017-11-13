@@ -18,7 +18,7 @@
 		<!-- BEGIN .article -->
 		<article class="article">
 
-			<?php if ( ! $front_page && ! has_post_thumbnail() || $front_page && ! has_post_thumbnail() && ! has_custom_header() || '' == get_theme_mod( 'display_img_title_page', '1' ) ) { ?>
+			<?php if ( ! $front_page && ! has_post_thumbnail() || $front_page && ! has_post_thumbnail() && ! has_custom_header() ) { ?>
 				<h1 class="headline"><?php the_title(); ?></h1>
 			<?php } ?>
 

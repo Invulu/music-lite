@@ -102,26 +102,31 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 
 			// Starter theme options.
 			'theme_mods' => array(
-				'music_lite_site_title' => '',
+				'music_lite_site_title' => '1',
 			),
 
 			// Set default theme logo and title.
 			'options' => array(
 				'custom_logo' => '{{logo}}',
+				'show_on_front' => 'page',
+				'page_on_front' => '{{home}}',
+				'page_for_posts' => '{{blog}}',
 				'blogname' => __( 'Music Theme', 'music-lite' ),
 				'blogdescription' => __( 'My <b>Awesome</b> Organic Theme', 'music-lite' ),
 			),
 
 			// Starter pages to include.
 			'posts' => array(
+				'home' => array(
+					'template' => 'template-home.php',
+					'post_title' => __( 'My Music Website', 'music-lite' ),
+					'post_excerpt' => __( 'This is the page excerpt.', 'music-lite' ),
+				),
 				'about' => array(
 					'thumbnail' => '{{image-about}}',
 				),
-				'services' => array(
-					'post_type' => 'page',
-					'post_title' => __( 'Services', 'music-lite' ),
-					'post_content' => __( '<p>This is an example services page. You may want to write about the various services your company provides.</p>', 'music-lite' ),
-					'thumbnail' => '{{image-services}}',
+				'blog' => array(
+					'thumbnail' => '{{image-blog}}',
 				),
 				'contact' => array(
 					'thumbnail' => '{{image-contact}}',
@@ -138,9 +143,9 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 					'post_title' => __( 'About Image', 'music-lite' ),
 					'file' => 'images/image-about.jpg',
 				),
-				'image-services' => array(
-					'post_title' => __( 'Services Image', 'music-lite' ),
-					'file' => 'images/image-services.jpg',
+				'image-blog' => array(
+					'post_title' => __( 'Blog Image', 'music-lite' ),
+					'file' => 'images/image-blog.jpg',
 				),
 				'image-contact' => array(
 					'post_title' => __( 'Contact Image', 'music-lite' ),
@@ -155,11 +160,7 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 					'items' => array(
 						'link_home',
 						'page_about',
-						'page_services' => array(
-							'type' => 'post_type',
-							'object' => 'page',
-							'object_id' => '{{services}}',
-						),
+						'page_blog',
 						'page_contact',
 					),
 				)
@@ -214,18 +215,6 @@ if ( ! function_exists( 'music_lite_enqueue_scripts' ) ) {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'music_lite_enqueue_scripts' );
-
-/*
--------------------------------------------------------------------------------------------------------
-	Theme Updater
--------------------------------------------------------------------------------------------------------
-*/
-
-/** Function music_lite_theme_updater */
-function music_lite_theme_updater() {
-	require( get_template_directory() . '/updater/theme-updater.php' );
-}
-add_action( 'after_setup_theme', 'music_lite_theme_updater' );
 
 /*
 -------------------------------------------------------------------------------------------------------
@@ -640,14 +629,4 @@ require_once( get_template_directory() . '/includes/plugin-activation-class.php'
 
 if ( class_exists( 'Jetpack' ) ) {
 	require get_template_directory() . '/jetpack/jetpack-setup.php';
-}
-
-/*
--------------------------------------------------------------------------------------------------------
-	Load WooCommerce File
--------------------------------------------------------------------------------------------------------
-*/
-
-if ( class_exists( 'Woocommerce' ) ) {
-	require get_template_directory() . '/includes/woocommerce-setup.php';
 }

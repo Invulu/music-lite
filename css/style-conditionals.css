@@ -14,155 +14,155 @@
 .music-lite-bg-dark .site-title a:visited {
 	color: #ffffff;
 }
-.music-lite-bg-light #navigation .menu .current_page_item a,
-.music-lite-bg-light #navigation .menu .current_page_ancestor a,
-.music-lite-bg-light #navigation .menu .current-menu-item a,
-.music-lite-bg-light #navigation .menu .current-cat a,
-.music-lite-bg-light #navigation .menu li .current_page_item a,
-.music-lite-bg-light #navigation .menu li .current_page_item a:hover,
-.music-lite-bg-light #navigation .menu li .current-menu-item a,
-.music-lite-bg-light #navigation .menu li .current-menu-item a:hover,
-.music-lite-bg-light #navigation .menu li .current-cat a,
-.music-lite-bg-light #navigation .menu li .current-cat a:hover,
-.music-lite-bg-light #navigation .menu li.current-menu-ancestor a,
-.music-lite-bg-light #navigation .menu li.current_page_ancestor a,
-.music-lite-bg-light #navigation .menu .current_page_item ul li a:hover,
-.music-lite-bg-light #navigation .menu .current-menu-item ul li a:hover,
-.music-lite-bg-light #navigation .menu .current-menu-ancestor ul li a:hover,
-.music-lite-bg-light #navigation .menu .current_page_ancestor ul li a:hover,
-.music-lite-bg-light #navigation .menu .current-menu-ancestor ul .current_page_item a,
-.music-lite-bg-light #navigation .menu .current_page_ancestor ul .current-menu-item a,
-.music-lite-bg-light #navigation .menu .current-cat ul li a:hover {
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_item a,
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_ancestor a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-item a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-cat a,
+#nav-bar.music-lite-bg-light #navigation .menu li .current_page_item a,
+#nav-bar.music-lite-bg-light #navigation .menu li .current_page_item a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu li .current-menu-item a,
+#nav-bar.music-lite-bg-light #navigation .menu li .current-menu-item a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu li .current-cat a,
+#nav-bar.music-lite-bg-light #navigation .menu li .current-cat a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu li.current-menu-ancestor a,
+#nav-bar.music-lite-bg-light #navigation .menu li.current_page_ancestor a,
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_item ul li a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-item ul li a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-ancestor ul li a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_ancestor ul li a:hover,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-ancestor ul .current_page_item a,
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_ancestor ul .current-menu-item a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-cat ul li a:hover {
 	color: #000000;
 }
-.music-lite-bg-light #navigation .menu .current_page_item ul li a,
-.music-lite-bg-light #navigation .menu .current-menu-item ul li a,
-.music-lite-bg-light #navigation .menu .current-menu-ancestor ul li a,
-.music-lite-bg-light #navigation .menu .current_page_ancestor ul li a,
-.music-lite-bg-light #navigation .menu .current-cat ul li a {
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_item ul li a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-item ul li a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-menu-ancestor ul li a,
+#nav-bar.music-lite-bg-light #navigation .menu .current_page_ancestor ul li a,
+#nav-bar.music-lite-bg-light #navigation .menu .current-cat ul li a {
 	color: rgba(0, 0, 0, 0.4);
 }
-.music-lite-bg-dark #navigation .menu .current_page_item a,
-.music-lite-bg-dark #navigation .menu .current_page_ancestor a,
-.music-lite-bg-dark #navigation .menu .current-menu-item a,
-.music-lite-bg-dark #navigation .menu .current-cat a,
-.music-lite-bg-dark #navigation .menu li .current_page_item a,
-.music-lite-bg-dark #navigation .menu li .current_page_item a:hover,
-.music-lite-bg-dark #navigation .menu li .current-menu-item a,
-.music-lite-bg-dark #navigation .menu li .current-menu-item a:hover,
-.music-lite-bg-dark #navigation .menu li .current-cat a,
-.music-lite-bg-dark #navigation .menu li .current-cat a:hover,
-.music-lite-bg-dark #navigation .menu li.current-menu-ancestor a,
-.music-lite-bg-dark #navigation .menu li.current_page_ancestor a,
-.music-lite-bg-dark #navigation .menu .current_page_item ul li a:hover,
-.music-lite-bg-dark #navigation .menu .current-menu-item ul li a:hover,
-.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul li a:hover,
-.music-lite-bg-dark #navigation .menu .current_page_ancestor ul li a:hover,
-.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul .current_page_item a,
-.music-lite-bg-dark #navigation .menu .current_page_ancestor ul .current-menu-item a,
-.music-lite-bg-dark #navigation .menu .current-cat ul li a:hover {
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_item a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_ancestor a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-item a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-cat a,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current_page_item a,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current_page_item a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current-menu-item a,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current-menu-item a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current-cat a,
+#nav-bar.music-lite-bg-dark #navigation .menu li .current-cat a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu li.current-menu-ancestor a,
+#nav-bar.music-lite-bg-dark #navigation .menu li.current_page_ancestor a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_item ul li a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-item ul li a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul li a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_ancestor ul li a:hover,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul .current_page_item a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_ancestor ul .current-menu-item a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-cat ul li a:hover {
 	color: #ffffff;
 }
-.music-lite-bg-dark #navigation .menu .current_page_item ul li a,
-.music-lite-bg-dark #navigation .menu .current-menu-item ul li a,
-.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul li a,
-.music-lite-bg-dark #navigation .menu .current_page_ancestor ul li a,
-.music-lite-bg-dark #navigation .menu .current-cat ul li a {
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_item ul li a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-item ul li a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-menu-ancestor ul li a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current_page_ancestor ul li a,
+#nav-bar.music-lite-bg-dark #navigation .menu .current-cat ul li a {
 	color: rgba(255, 255, 255, 0.6);
 }
-.music-lite-bg-dark .menu a,
-.music-lite-bg-dark .menu a:link,
-.music-lite-bg-dark .menu a:visited,
-.music-lite-bg-dark .mobile-menu a,
-.music-lite-bg-dark .mobile-menu a:link,
-.music-lite-bg-dark .mobile-menu a:visited {
+#nav-bar.music-lite-bg-dark .menu a,
+#nav-bar.music-lite-bg-dark .menu a:link,
+#nav-bar.music-lite-bg-dark .menu a:visited,
+#nav-bar.music-lite-bg-dark .mobile-menu a,
+#nav-bar.music-lite-bg-dark .mobile-menu a:link,
+#nav-bar.music-lite-bg-dark .mobile-menu a:visited {
 	color: #cccccc;
 	color: rgba(255, 255, 255, 0.6);
 	border-color: rgba(255, 255, 255, 0.24);
 }
-.music-lite-bg-light .menu a,
-.music-lite-bg-light .menu a:link,
-.music-lite-bg-light .menu a:visited,
-.music-lite-bg-light .mobile-menu a,
-.music-lite-bg-light .mobile-menu a:link,
-.music-lite-bg-light .mobile-menu a:visited {
+#nav-bar.music-lite-bg-light .menu a,
+#nav-bar.music-lite-bg-light .menu a:link,
+#nav-bar.music-lite-bg-light .menu a:visited,
+#nav-bar.music-lite-bg-light .mobile-menu a,
+#nav-bar.music-lite-bg-light .mobile-menu a:link,
+#nav-bar.music-lite-bg-light .mobile-menu a:visited {
 	color: #999999;
 	color: rgba(0, 0, 0, 0.4);
 }
-.music-lite-bg-dark .menu a:focus,
-.music-lite-bg-dark .menu a:hover,
-.music-lite-bg-dark .menu a:active,
-.music-lite-bg-dark .mobile-menu a:focus,
-.music-lite-bg-dark .mobile-menu a:hover,
-.music-lite-bg-dark .mobile-menu a:active {
+#nav-bar.music-lite-bg-dark .menu a:focus,
+#nav-bar.music-lite-bg-dark .menu a:hover,
+#nav-bar.music-lite-bg-dark .menu a:active,
+#nav-bar.music-lite-bg-dark .mobile-menu a:focus,
+#nav-bar.music-lite-bg-dark .mobile-menu a:hover,
+#nav-bar.music-lite-bg-dark .mobile-menu a:active {
 	color: #ffffff;
 }
-.music-lite-bg-light .menu a:focus,
-.music-lite-bg-light .menu a:hover,
-.music-lite-bg-light .menu a:active,
-.music-lite-bg-light .mobile-menu a:focus,
-.music-lite-bg-light .mobile-menu a:hover,
-.music-lite-bg-light .mobile-menu a:active {
+#nav-bar.music-lite-bg-light .menu a:focus,
+#nav-bar.music-lite-bg-light .menu a:hover,
+#nav-bar.music-lite-bg-light .menu a:active,
+#nav-bar.music-lite-bg-light .mobile-menu a:focus,
+#nav-bar.music-lite-bg-light .mobile-menu a:hover,
+#nav-bar.music-lite-bg-light .mobile-menu a:active {
 	color: #000000;
 	color: rgba(0, 0, 0, 0.8);
 }
-.music-lite-bg-dark .menu ul.sub-menu,
-.music-lite-bg-dark .menu ul.children {
+#nav-bar.music-lite-bg-dark .menu ul.sub-menu,
+#nav-bar.music-lite-bg-dark .menu ul.children {
 	border-color: rgba(255, 255, 255, 0.24);
 }
-.music-lite-bg-dark button.menu-toggle svg {
+#nav-bar.music-lite-bg-dark button.menu-toggle svg {
 	fill: rgba(255, 255, 255, 0.6);
 }
-.music-lite-bg-dark button.menu-toggle:hover svg {
+#nav-bar.music-lite-bg-dark button.menu-toggle:hover svg {
 	fill: rgba(255, 255, 255, 1);
 }
 
 /* Down-Facing Arrows */
 
-.music-lite-bg-light .sf-arrows .sf-with-ul:after {
+#nav-bar.music-lite-bg-light .sf-arrows .sf-with-ul:after {
 	border-top-color: #999999;
 	border-top-color: rgba(0, 0, 0, 0.4);
 }
-.music-lite-bg-dark .sf-arrows .sf-with-ul:after {
+#nav-bar.music-lite-bg-dark .sf-arrows .sf-with-ul:after {
 	border-top-color: #999999;
 	border-top-color: rgba(255, 255, 255, 0.4);
 }
-.music-lite-bg-light .sf-arrows li > .sf-with-ul:focus:after,
-.music-lite-bg-light .sf-arrows li:hover > .sf-with-ul:after,
-.music-lite-bg-light .sf-arrows li.sfHover > .sf-with-ul:after {
+#nav-bar.music-lite-bg-light .sf-arrows li > .sf-with-ul:focus:after,
+#nav-bar.music-lite-bg-light .sf-arrows li:hover > .sf-with-ul:after,
+#nav-bar.music-lite-bg-light .sf-arrows li.sfHover > .sf-with-ul:after {
 	border-top-color: rgba(0, 0, 0, 0.8);
 }
-.music-lite-bg-dark .sf-arrows li > .sf-with-ul:focus:after,
-.music-lite-bg-dark .sf-arrows li:hover > .sf-with-ul:after,
-.music-lite-bg-dark .sf-arrows li.sfHover > .sf-with-ul:after {
+#nav-bar.music-lite-bg-dark .sf-arrows li > .sf-with-ul:focus:after,
+#nav-bar.music-lite-bg-dark .sf-arrows li:hover > .sf-with-ul:after,
+#nav-bar.music-lite-bg-dark .sf-arrows li.sfHover > .sf-with-ul:after {
 	border-top-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Right-Facing Arrows */
 
-.music-lite-bg-light .sf-arrows li li .sf-with-ul:after,
-.music-lite-bg-dark .sf-arrows li li .sf-with-ul:after {
+#nav-bar.music-lite-bg-light .sf-arrows li li .sf-with-ul:after,
+#nav-bar.music-lite-bg-dark .sf-arrows li li .sf-with-ul:after {
 	margin-top: -3px;
 	margin-right: -3px;
 	border-top-color: transparent;
 }
-.music-lite-bg-light .sf-arrows li li .sf-with-ul:after {
+#nav-bar.music-lite-bg-light .sf-arrows li li .sf-with-ul:after {
 	border-left-color: #999999;
 	border-left-color: rgba(0, 0, 0, 0.4);
 }
-.music-lite-bg-dark .sf-arrows li li .sf-with-ul:after {
+#nav-bar.music-lite-bg-dark .sf-arrows li li .sf-with-ul:after {
 	border-left-color: #999999;
 	border-left-color: rgba(255, 255, 255, 0.4);
 }
-.music-lite-bg-light .sf-arrows li li > .sf-with-ul:focus:after,
-.music-lite-bg-light .sf-arrows li li:hover > .sf-with-ul:after,
-.music-lite-bg-light .sf-arrows li li.sfHover > .sf-with-ul:after {
+#nav-bar.music-lite-bg-light .sf-arrows li li > .sf-with-ul:focus:after,
+#nav-bar.music-lite-bg-light .sf-arrows li li:hover > .sf-with-ul:after,
+#nav-bar.music-lite-bg-light .sf-arrows li li.sfHover > .sf-with-ul:after {
 	border-top-color: transparent;
 	border-left-color: rgba(0, 0, 0, 0.8);
 }
-.music-lite-bg-dark .sf-arrows li li > .sf-with-ul:focus:after,
-.music-lite-bg-dark .sf-arrows li li:hover > .sf-with-ul:after,
-.music-lite-bg-dark .sf-arrows li li.sfHover > .sf-with-ul:after {
+#nav-bar.music-lite-bg-dark .sf-arrows li li > .sf-with-ul:focus:after,
+#nav-bar.music-lite-bg-dark .sf-arrows li li:hover > .sf-with-ul:after,
+#nav-bar.music-lite-bg-dark .sf-arrows li li.sfHover > .sf-with-ul:after {
 	border-top-color: transparent;
 	border-left-color: rgba(255, 255, 255, 0.8);
 }
@@ -345,7 +345,8 @@
 .wp-custom-header.music-lite-bg-dark,
 .banner-img.music-lite-bg-dark,
 .music-lite-bg-dark .commentlist li,
-.music-lite-bg-dark .commentlist li:last-child {
+.music-lite-bg-dark .commentlist li:last-child,
+.music-lite-bg-dark .archive-title {
 	border-color: rgba(255, 255, 255, 0.24);
 }
 .music-lite-bg-dark .footer-information a,

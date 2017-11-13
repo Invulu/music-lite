@@ -138,7 +138,7 @@
 		<!-- END #nav-bar -->
 		</div>
 
-		<?php if ( is_home() || is_archive() || is_search() || is_attachment() ) { ?>
+		<?php $header_image = get_header_image(); if ( ( is_home() || is_archive() || is_search() || is_attachment() ) && ! empty( $header_image ) ) { ?>
 
 		<!-- BEGIN #custom-header -->
 		<div id="custom-header">

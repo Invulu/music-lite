@@ -7,7 +7,7 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 2.0.1
+	Version: 1.0
 	Text Domain: music-lite
 	Domain Path: /languages/
 	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
@@ -62,6 +62,7 @@ body {
 	background-color: #111111;
 	color: #666666;
 	color: rgba(0, 0, 0, 0.7);
+	font-family: 'Roboto';
 	font-size: 1em;
 	font-weight: 300;
 	line-height: 1.65;
@@ -295,16 +296,17 @@ a:focus, a:hover, a:active {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #000000;
+	font-family: 'Anton';
 	font-weight: 400;
 	line-height: 1.1;
 	word-wrap: break-word;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 	margin: 6px 0px;
 	padding: 6px 0px;
 }
 h1 {
 	font-size: 3.2em;
-	letter-spacing: -1px;
 }
 h2 {
 	font-size: 2.8em;
@@ -317,11 +319,9 @@ h4 {
 }
 h5 {
 	font-size: 1.6em;
-	letter-spacing: 1px;
 }
 h6 {
 	font-size: 1.3em;
-	letter-spacing: 1px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
@@ -339,7 +339,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 .headline {
 	font-size: 4em;
-	letter-spacing: 0px;
+	letter-spacing: 1px;
 	margin-top: 0px;
 	padding-top: 0px;
 	text-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
@@ -381,6 +381,9 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 #nav-bar .contact-info span {
 	padding-left: 18px;
+}
+#nav-bar .contact-info span:first-child {
+	padding-left: 0px;
 }
 #custom-header {
 	display: block;
@@ -458,7 +461,8 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 #masthead .site-description {
 	display: block;
 	color: #ffffff;
-	font-size: 2.8em;
+	font-family: 'Anton';
+	font-size: 3em;
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 1.1;
@@ -828,6 +832,9 @@ ul.menu li li:hover ul {
 .music-home-page #nav-bar {
 	position: fixed;
 }
+.admin-bar.music-home-page #nav-bar {
+	margin-top: 32px;
+}
 .music-home-page #wp-custom-header {
 	height: 100vh;
 	max-height: none;
@@ -836,10 +843,14 @@ ul.menu li li:hover ul {
 	height: 100vh;
 	max-height: none;
 	border-bottom: none;
+	overflow: hidden;
 }
 .music-home-page.music-header-video-active .feature-img.banner-img {
 	height: 100vh;
 	overflow: hidden;
+}
+.admin-bar.music-home-page.music-header-video-active .feature-img.banner-img {
+	height: calc(100vh - 32px);
 }
 .music-home-page .wp-custom-header img {
 	display: none;
@@ -847,7 +858,10 @@ ul.menu li li:hover ul {
 .music-home-page .banner-img .excerpt {
 	font-size: 120%;
 	max-width: 800px;
-	margin: 12px auto;
+	margin: 0px auto;
+}
+.music-home-page.music-header-video-active .banner-img .excerpt p {
+	color: rgba(255, 255, 255, 0.8);
 }
 .music-home-page .custom-logo-link {
 	display: inline-block;
@@ -1146,8 +1160,11 @@ body.music-landing-page {
 .banner-img .headline {
 	color: #ffffff;
 	text-align: center;
-	margin: 24px 0px;
+	margin: 12px 0px;
 	padding: 0px;
+}
+.banner-img .headline + .excerpt {
+	margin-top: -12px;
 }
 .banner-img .img-title {
 	width: 88%;
@@ -1570,7 +1587,7 @@ html[xmlns] .slides {
 
 .sidebar {
 	background-color: #000000;
-	margin: 24px 0px;
+	margin: 0px;
 	padding: 24px;
 	box-sizing: border-box;
 }

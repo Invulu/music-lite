@@ -54,15 +54,7 @@
 
 					<p><?php esc_html_e( 'Copyright', 'music-lite' ); ?> &copy; <?php echo date( esc_html__( 'Y', 'music-lite' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'music-lite' ); ?> &middot; <?php esc_html( bloginfo( 'name' ) ); ?></p>
 
-					<?php if ( '' != get_theme_mod( 'music_lite_footer_text' ) ) { ?>
-
-						<p><span class="footer-site-info"><?php echo get_theme_mod( 'music_lite_footer_text' ); ?></span></p>
-
-					<?php } else { ?>
-
-						<p><?php printf( esc_html__( '%1$s by %2$s', 'music-lite' ), 'Music v2', '<a href="http://organicthemes.com/">Organic Themes</a>' ); ?></p>
-
-					<?php } ?>
+					<p><?php printf( esc_html__( '%1$s by %2$s', 'music-lite' ), 'Music Lite', '<a href="http://organicthemes.com/">Organic Themes</a>' ); ?></p>
 
 				</div>
 
