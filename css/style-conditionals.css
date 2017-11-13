@@ -210,7 +210,7 @@
 	height: 0;
 }
 .music-header-video-active .wp-custom-header::before {
-	position: absolute;
+	position: fixed;
 	pointer-events: none;
 	top: 0;
 	left: 0;
