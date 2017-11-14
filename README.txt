@@ -1,6 +1,6 @@
 === Music Lite ===
 
-Version: 1.0.1
+Version: 1.1
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
@@ -49,7 +49,7 @@ Music Lite is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-== 1.0.1 ==
+== 1.1 ==
 * Fixed multiple text domains
 * Updated theme description
 
