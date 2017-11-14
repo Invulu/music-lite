@@ -1,6 +1,6 @@
 === Music Lite ===
 
-Version: 2.0.1
+Version: 1.0.1
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A minimally designed theme framework for WordPress. Created by Organic Themes.
+A WordPress theme for musicians. Created by Organic Themes.
 
 == Installation ==
 
@@ -30,12 +30,12 @@ Music Lite is distributed under the terms of the GNU GPL
 * logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 * logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 * close.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
-* menu.png: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
+* menu.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 * default-header.jpg: Source: Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 * default-image.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
 * image-about.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
-* image-services.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
+* image-blog.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
 * image-contact.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
 
 == Font Awesome ==
@@ -49,8 +49,9 @@ Music Lite is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-== 2.0.1 ==
-* Style fix for banner image text on small screens
+== 1.0.1 ==
+* Fixed multiple text domains
+* Updated theme description
 
-== 2.0 ==
-* Complete rebuild
+== 1.0 ==
+* Initial build

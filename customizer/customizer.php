@@ -161,7 +161,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//
 
 	$wp_customize->add_section( 'music_lite_contact_section' , array(
-		'title'       => esc_html__( 'Contact Info', 'organic-business' ),
+		'title'       => esc_html__( 'Contact Info', 'music-lite' ),
 		'priority'    => 90,
 		'panel' => 'music_lite_theme_options',
 	) );
@@ -172,7 +172,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'sanitize_email',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_contact_email', array(
-			'label'		=> esc_html__( 'Email Address', 'organic-business' ),
+			'label'		=> esc_html__( 'Email Address', 'music-lite' ),
 			'section'	=> 'music_lite_contact_section',
 			'settings'	=> 'music_lite_contact_email',
 			'type'		=> 'text',
@@ -185,7 +185,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'music_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_contact_phone', array(
-			'label'		=> esc_html__( 'Phone Number', 'organic-business' ),
+			'label'		=> esc_html__( 'Phone Number', 'music-lite' ),
 			'section'	=> 'music_lite_contact_section',
 			'settings'	=> 'music_lite_contact_phone',
 			'type'		=> 'text',
@@ -210,7 +210,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'music_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_home_link', array(
-			'label'		=> esc_html__( 'Home Featured Link', 'organic-business' ),
+			'label'		=> esc_html__( 'Home Featured Link', 'music-lite' ),
 			'section'	=> 'music_lite_templates_section',
 			'settings'	=> 'music_lite_home_link',
 			'type'		=> 'text',
@@ -223,7 +223,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'music_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_home_link_text', array(
-			'label'		=> esc_html__( 'Home Featured Link Text', 'organic-business' ),
+			'label'		=> esc_html__( 'Home Featured Link Text', 'music-lite' ),
 			'section'	=> 'music_lite_templates_section',
 			'settings'	=> 'music_lite_home_link_text',
 			'type'		=> 'text',
