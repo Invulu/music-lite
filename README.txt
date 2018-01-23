@@ -1,10 +1,10 @@
 === Music Lite ===
 
-Version: 1.1.1
+Version: 1.1.3
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
-Tested up to: 4.8.3
+Tested up to: 4.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,11 +32,10 @@ Music Lite is distributed under the terms of the GNU GPL
 * close.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * menu.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-* default-header.jpg: Source: Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
-* default-image.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
-* image-about.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
-* image-blog.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
-* image-contact.jpg: Source: Unsplash, https://unsplash.com. License: Creative Commons Zero license, https://unsplash.com/license.
+* default-header.jpg: Source: Pixabay, https://pixabay.com/en/guitar-music-band-instrument-1245856/. Licensed under Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
+* image-about.jpg: Source: Pixabay, https://pixabay.com/en/music-silhouette-concert-people-3084876/. License: Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
+* image-blog.jpg: Source: Pixabay, https://pixabay.com/en/drums-set-people-man-concert-2599508/. License: Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
+* image-contact.jpg: Source: Pixabay, https://pixabay.com/en/audience-backlit-celebration-1850119/. License: Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
 
 == Font Awesome ==
 
@@ -48,6 +47,20 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.1.3 ==
+* Updated prefixes throughout theme to 'music-lite'
+* Replaced Unsplash images with Pixabay
+* Fixed missing escaping for get_theme_mod
+* Removed sticky post tag
+* Added editor style separately
+* Changed wp_reset_query to wp_reset_postdata
+* Updated sanitization
+* Removed languages folder
+
+== 1.1.2 ==
+* Updated required custom post type plugin to recommended
+* Updated required custom post type plugin to install from plugin directory
 
 == 1.1.1 ==
 * Minor style fixes to the menu

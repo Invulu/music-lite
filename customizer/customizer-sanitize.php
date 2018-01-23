@@ -71,13 +71,3 @@ function music_lite_sanitize_checkbox( $input ) {
 		return '';
 	}
 }
-
-/**
- * Sanitize Text Input.
- *
- * @param array $input Sanitizes user input.
- * @return array
- */
-function music_lite_sanitize_text( $input ) {
-	 return wp_kses_post( force_balance_tags( $input ) );
-}

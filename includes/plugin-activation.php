@@ -47,8 +47,7 @@ function music_lite_register_required_plugins() {
 		array(
 			'name'      => 'Organic Custom Content',
 			'slug'      => 'organic-custom-content',
-			'required'  => true,
-			'source'    => esc_url('https://github.com/Invulu/organic-custom-content/archive/master.zip'),
+			'required'  => false,
 		),
 		array(
 			'name'      => 'Organic Customizer Widgets', // The plugin name.

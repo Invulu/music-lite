@@ -19,7 +19,7 @@ function music_lite_custom_styles() {
 	<style>
 
 	#wrapper .post-area {
-		background-color: #<?php echo get_theme_mod( 'background_color', '111111' ); ?> ;
+		background-color: #<?php echo esc_attr( get_theme_mod( 'background_color', '111111' ) ); ?> ;
 	}
 
 	.wp-custom-header {

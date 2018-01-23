@@ -56,7 +56,7 @@
 				<?php } ?>
 
 				<?php if ( '' != $tour_date_venue_url ) { ?>
-					<p class="tour-ticket"><a href="<?php echo esc_attr( $tour_date_venue_url ); ?>" target="_blank">
+					<p class="tour-ticket"><a href="<?php echo esc_url( $tour_date_venue_url ); ?>" target="_blank">
 						<?php esc_html_e( 'Buy Tickets', 'music-lite' ); ?>
 					</a></p>
 				<?php } ?>
@@ -67,4 +67,4 @@
 	<?php endwhile; ?>
 	<?php endif; ?>
 
-<?php wp_reset_query(); ?>
+<?php wp_reset_postdata(); ?>

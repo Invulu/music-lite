@@ -182,7 +182,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 		// Contact Phone
 		$wp_customize->add_setting( 'music_lite_contact_phone', array(
 			'default' => '941.123.4567',
-			'sanitize_callback' => 'music_lite_sanitize_text',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_contact_phone', array(
 			'label'		=> esc_html__( 'Phone Number', 'music-lite' ),
@@ -207,7 +207,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 		// Featured Link
 		$wp_customize->add_setting( 'music_lite_home_link', array(
 			'default' => '',
-			'sanitize_callback' => 'music_lite_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_home_link', array(
 			'label'		=> esc_html__( 'Home Featured Link', 'music-lite' ),
@@ -220,7 +220,7 @@ function music_lite_theme_customizer( $wp_customize ) {
 		// Featured Link Text
 		$wp_customize->add_setting( 'music_lite_home_link_text', array(
 			'default' => 'Learn More',
-			'sanitize_callback' => 'music_lite_sanitize_text',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_home_link_text', array(
 			'label'		=> esc_html__( 'Home Featured Link Text', 'music-lite' ),

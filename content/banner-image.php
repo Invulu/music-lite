@@ -9,7 +9,7 @@
 ?>
 
 <?php $header_image = get_custom_header_markup(); ?>
-<?php $thumb = ( '' != get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'music-featured-large' ) : false; ?>
+<?php $thumb = ( '' != get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'music-lite-featured-large' ) : false; ?>
 
 <?php if ( is_page_template( 'template-home.php' ) ) { ?>
 
@@ -30,7 +30,7 @@
 
 				<?php if ( '' != get_theme_mod( 'music_lite_home_link', '' ) && get_theme_mod( 'music_lite_home_link', '' ) ) { ?>
 					<div class="align-center text-center">
-						<a class="button" href="<?php echo get_theme_mod( 'music_lite_home_link', '' ); ?>"><?php echo get_theme_mod( 'music_lite_home_link_text', 'Learn More' ); ?></a>
+						<a class="button" href="<?php echo esc_url( get_theme_mod( 'music_lite_home_link', '' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_home_link_text', 'Learn More' ) ); ?></a>
 					</div>
 				<?php } ?>
 
@@ -55,7 +55,7 @@
 					<div class="excerpt"><?php the_excerpt(); ?></div>
 				<?php } ?>
 			</div>
-			<?php the_post_thumbnail( 'music-featured-large' ); ?>
+			<?php the_post_thumbnail( 'music-lite-featured-large' ); ?>
 		</div>
 
 	<!-- END .row -->

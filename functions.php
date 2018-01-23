@@ -37,10 +37,10 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 		*/
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'music-featured-large', 2400, 1800, true ); // Large Featured Image.
-		add_image_size( 'music-featured-medium', 1200, 800, true ); // Medium Featured Image.
-		add_image_size( 'music-featured-small', 640, 640, true ); // Small Featured Image.
-		add_image_size( 'music-featured-square', 1800, 1800, true ); // Square Featured Image.
+		add_image_size( 'music-lite-featured-large', 2400, 1800, true ); // Large Featured Image.
+		add_image_size( 'music-lite-featured-medium', 1200, 800, true ); // Medium Featured Image.
+		add_image_size( 'music-lite-featured-small', 640, 640, true ); // Small Featured Image.
+		add_image_size( 'music-lite-featured-square', 1800, 1800, true ); // Square Featured Image.
 
 		/*
 		* Enable support for site title tag.
@@ -535,73 +535,73 @@ function music_lite_body_class( $classes ) {
 	$post_pages = is_home() || is_archive() || is_search() || is_attachment();
 
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-		$classes[] = 'music-has-logo'; }
+		$classes[] = 'music-lite-has-logo'; }
 
 	if ( is_page_template( 'template-home.php' ) ) {
-		$classes[] = 'music-home-page'; }
+		$classes[] = 'music-lite-home-page'; }
 
 	if ( is_page_template( 'template-slideshow.php' ) ) {
-		$classes[] = 'music-slideshow'; }
+		$classes[] = 'music-lite-slideshow'; }
 
 	if ( 'left' == get_theme_mod( 'music_lite_logo_align', 'left' ) ) {
-		$classes[] = 'music-logo-left'; }
+		$classes[] = 'music-lite-logo-left'; }
 
 	if ( 'center' == get_theme_mod( 'music_lite_logo_align', 'left' ) ) {
-		$classes[] = 'music-logo-center'; }
+		$classes[] = 'music-lite-logo-center'; }
 
 	if ( 'right' == get_theme_mod( 'music_lite_logo_align', 'left' ) ) {
-		$classes[] = 'music-logo-right'; }
+		$classes[] = 'music-lite-logo-right'; }
 
 	if ( 'left' == get_theme_mod( 'music_lite_desc_align', 'center' ) ) {
-		$classes[] = 'music-desc-left'; }
+		$classes[] = 'music-lite-desc-left'; }
 
 	if ( 'center' == get_theme_mod( 'music_lite_desc_align', 'center' ) ) {
-		$classes[] = 'music-desc-center'; }
+		$classes[] = 'music-lite-desc-center'; }
 
 	if ( 'right' == get_theme_mod( 'music_lite_desc_align', 'center' ) ) {
-		$classes[] = 'music-desc-right'; }
+		$classes[] = 'music-lite-desc-right'; }
 
 	if ( 'blank' != get_theme_mod( 'music_lite_site_tagline' ) ) {
-		$classes[] = 'music-desc-active';
+		$classes[] = 'music-lite-desc-active';
 	} else {
-		$classes[] = 'music-desc-inactive';
+		$classes[] = 'music-lite-desc-inactive';
 	}
 
 	if ( is_singular() && ! has_post_thumbnail() ) {
-		$classes[] = 'music-no-img'; }
+		$classes[] = 'music-lite-no-img'; }
 
 	if ( is_singular() && has_post_thumbnail() ) {
-		$classes[] = 'music-has-img'; }
+		$classes[] = 'music-lite-has-img'; }
 
 	if ( $post_pages && ! empty( $header_image ) || is_page() && ! has_post_thumbnail() && ! empty( $header_image ) ) {
-		$classes[] = 'music-header-active';
+		$classes[] = 'music-lite-header-active';
 	} else {
-		$classes[] = 'music-header-inactive';
+		$classes[] = 'music-lite-header-inactive';
 	}
 
 	if ( is_header_video_active() && has_header_video() ) {
-		$classes[] = 'music-header-video-active';
+		$classes[] = 'music-lite-header-video-active';
 	} else {
-		$classes[] = 'music-header-video-inactive';
+		$classes[] = 'music-lite-header-video-inactive';
 	}
 
 	if ( is_singular() ) {
-		$classes[] = 'music-singular';
+		$classes[] = 'music-lite-singular';
 	}
 
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'music-sidebar-1';
+		$classes[] = 'music-lite-sidebar-1';
 	}
 
 	if ( '' != get_theme_mod( 'background_image' ) ) {
 		// This class will render when a background image is set
 		// regardless of whether the user has set a color as well.
-		$classes[] = 'music-background-image';
+		$classes[] = 'music-lite-background-image';
 	} else if ( ! in_array( get_background_color(), array( '', get_theme_support( 'custom-background', 'default-color' ) ), true ) ) {
 		// This class will render when a background color is set
 		// but no image is set. In the case the content text will
 		// Adjust relative to the background color.
-		$classes[] = 'music-relative-text';
+		$classes[] = 'music-lite-relative-text';
 	}
 
 	return $classes;

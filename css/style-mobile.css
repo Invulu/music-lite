@@ -295,16 +295,16 @@
 
 	/* Home Page */
 
-	.music-home-page #nav-bar,
-	.music-home-page .tour-dates {
+	.music-lite-home-page #nav-bar,
+	.music-lite-home-page .tour-dates {
 		position: relative;
 	}
-	.music-home-page .tour-date {
+	.music-lite-home-page .tour-date {
 		padding: 18px 0px;
 		border-left: none;
 		border-top: 1px solid rgba(255, 255, 255, 0.24);
 	}
-	.music-home-page .tour-date:first-child {
+	.music-lite-home-page .tour-date:first-child {
 		border-top: none;
 	}
 

@@ -7,10 +7,10 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1.1
+	Version: 1.1.3
 	Text Domain: music-lite
 	Domain Path: /languages/
-	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
+	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, threaded-comments, editor-style, theme-options, footer-widgets
 
 	The CSS, XHTML and Design are released under the GPL:
 	http://www.opensource.org/licenses/gpl-license.php
@@ -29,27 +29,25 @@
 	 7. Social Media
 	 8. Pagination
 	 9.	Images
-	10. Slideshow
-	11. Portfolio & Testimonials
-	12.	Wordpress Gallery
-	13.	Sidebar
-	14.	Widgets
-	15.	RSS Widget
-	16.	Calendar Widget
-	17.	Custom Menu Widget
-	18.	Search Form
-	19.	Footer
-	20.	Comments
-	21.	Buttons
-	22. Columns
-	23. Tables
-	24. Forms
-	25. CSS3 Styles
-	26. Jetpack
-	27. WordPress Core
-	28. Woocommerce
-	29. Organic Widgets
-	30. Shortcodes
+	10.	Wordpress Gallery
+	11.	Sidebar
+	12.	Widgets
+	13.	RSS Widget
+	14.	Calendar Widget
+	15.	Custom Menu Widget
+	16.	Search Form
+	17.	Footer
+	18.	Comments
+	19.	Buttons
+	20. Columns
+	21. Tables
+	22. Forms
+	23. CSS3 Styles
+	24. Jetpack
+	25. WordPress Core
+	26. Woocommerce
+	27. Organic Widgets
+	28. Shortcodes
 
 *******************************************************************************************************************/
 
@@ -563,6 +561,7 @@ ul.menu li li:hover ul {
 }
 .menu ul.sub-menu,
 .menu ul.children {
+	display: none;
 	background-color: #000000;
 	padding: 0px;
 	border-left: 1px solid rgba(255, 255, 255, 0.24);
@@ -576,6 +575,11 @@ ul.menu li li:hover ul {
 .menu ul.children ul.children {
 	transition-delay: 0s;
 	-webkit-transition-delay: 0s; /* Safari */
+}
+.menu li.menu-item-has-children:hover .sub-menu,
+.menu li.menu-item-has-children:focus .sub-menu,
+.menu li.menu-item-has-children:active .sub-menu {
+	display: block;
 }
 .menu a {
 	color: #999999;
@@ -829,50 +833,50 @@ ul.menu li li:hover ul {
 6. Page Templates
 ************************************************/
 
-.music-home-page #nav-bar {
+.music-lite-home-page #nav-bar {
 	position: fixed;
 }
-.admin-bar.music-home-page #nav-bar {
+.admin-bar.music-lite-home-page #nav-bar {
 	margin-top: 32px;
 }
-.music-home-page #wp-custom-header {
+.music-lite-home-page #wp-custom-header {
 	height: 100vh;
 	max-height: none;
 }
-.music-home-page .feature-img.banner-img {
+.music-lite-home-page .feature-img.banner-img {
 	height: 100vh;
 	max-height: none;
 	border-bottom: none;
 	overflow: hidden;
 }
-.music-home-page.music-header-video-active .feature-img.banner-img {
+.music-lite-home-page.music-lite-header-video-active .feature-img.banner-img {
 	height: 100vh;
 	overflow: hidden;
 }
-.admin-bar.music-home-page.music-header-video-active .feature-img.banner-img {
+.admin-bar.music-lite-home-page.music-lite-header-video-active .feature-img.banner-img {
 	height: calc(100vh - 32px);
 }
-.music-home-page .wp-custom-header img {
+.music-lite-home-page .wp-custom-header img {
 	display: none;
 }
-.music-home-page .banner-img .excerpt {
+.music-lite-home-page .banner-img .excerpt {
 	font-size: 120%;
 	max-width: 800px;
 	margin: 0px auto;
 }
-.music-home-page.music-header-video-active .banner-img .excerpt p {
+.music-lite-home-page.music-lite-header-video-active .banner-img .excerpt p {
 	color: rgba(255, 255, 255, 0.8);
 }
-.music-home-page .custom-logo-link {
+.music-lite-home-page .custom-logo-link {
 	display: inline-block;
 	max-width: none;
 	margin: 0px auto;
 	padding: 0px;
 }
-.music-home-page .custom-logo-link img {
+.music-lite-home-page .custom-logo-link img {
 	margin: 0px auto;
 }
-.music-home-page .tour-dates {
+.music-lite-home-page .tour-dates {
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
@@ -882,7 +886,7 @@ ul.menu li li:hover ul {
 	box-sizing: border-box;
 	z-index: 8;
 }
-.music-home-page .tour-date {
+.music-lite-home-page .tour-date {
 	align-self: center;
 	text-align: center;
 	width: 100%;
@@ -893,21 +897,21 @@ ul.menu li li:hover ul {
 	box-sizing: border-box;
 	border-left: 1px solid rgba(255, 255, 255, 0.24);
 }
-.music-home-page .tour-date:first-child {
+.music-lite-home-page .tour-date:first-child {
 	border-left: none;
 }
-.music-home-page .tour-date p {
+.music-lite-home-page .tour-date p {
 	padding: 0px;
 }
-.music-home-page .tour-date-datetime {
+.music-lite-home-page .tour-date-datetime {
 	font-size: 80%;
 	opacity: 0.7;
 }
-.music-home-page .tour-ticket,
-.music-home-page .tour-date-location {
+.music-lite-home-page .tour-ticket,
+.music-lite-home-page .tour-date-location {
 	display: inline-block;
 }
-.music-home-page p.tour-ticket {
+.music-lite-home-page p.tour-ticket {
 	margin-left: 12px;
 	padding-left: 12px;
 	border-left: 1px solid rgba(255, 255, 255, 0.24);
@@ -1256,278 +1260,7 @@ img.alignleft {
 }
 
 /************************************************
-10. Slideshow
-************************************************/
-
-.slideshow {
-	display: block;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	position: relative;
-	overflow: hidden;
-	z-index: 7;
-}
-.flexslider .preloader {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -16px;
-	margin-top: -16px;
-	border-bottom: 3px solid rgba(0, 0, 0, 0.08);
-	border-left: 3px solid rgba(0, 0, 0, 0.08);
-	border-right: 3px solid rgba(0, 0, 0, 0.24);
-	border-top: 3px solid rgba(0, 0, 0, 0.24);
-	border-radius: 100%;
-	height: 32px;
-	width: 32px;
-	-webkit-animation: spin .6s infinite linear;
-	-moz-animation: spin .6s infinite linear;
-	-ms-animation: spin .6s infinite linear;
-	-o-animation: spin .6s infinite linear;
-	animation: spin .6s infinite linear;
-	z-index: 999;
-}
-.flexslider {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-.flexslider.loading {
-	min-height: 480px;
-}
-.flexslider ul,
-.flexslider li {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-}
-.flexslider .slides {
-	position: relative;
-	overflow: hidden;
-	zoom: 1;
-}
-.flexslider .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
-}
-.flexslider .slides li {
-	position: relative;
-	min-height: 280px;
-	max-height: 720px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-.flexslider .slides img {
-	width: 100%;
-	display: block;
-}
-.flex-pauseplay span {
-	text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-.slides:after {
-	content: "\0020";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-html[xmlns] .slides {
-	display: block;
-}
-* html .slides {
-	height: 1%;
-}
-
-/* No JavaScript Fallback */
-.no-js .slides > li:first-child {
-	display: none;
-}
-
-/* Caption style */
-.flex-caption {
-	background: none;
-	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	zoom: 1;
-}
-.flex-caption {
-	background: rgba(0, 0, 0, 0.3);
-	color: #FFFFFF;
-	width: 96%;
-	padding: 2%;
-	margin: 0;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-}
-
-/* Direction Nav */
-.flex-direction-nav {
-	height: 0;
-}
-.flex-direction-nav li a {
-	display: block;
-	background-color: #ffffff;
-	font-size: 16px;
-	line-height: 30px;
-	height: 32px;
-	width: 32px;
-	text-decoration: none;
-	margin-top: -16px;
-	opacity: 1;
-	position: absolute;
-	top: 50%;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 9;
-	border-radius: 2px;
-}
-.flex-direction-nav .flex-next {
-	right: 24px;
-	text-align: center;
-}
-.flex-direction-nav .flex-prev {
-	left: 24px;
-	text-align: center;
-}
-.flex-direction-nav .flex-next i,
-.flex-direction-nav .flex-prev i {
-	color: #999999;
-	color: rgba(0, 0, 0, 0.4);
-	font-weight: bold;
-}
-.flex-direction-nav .flex-prev:hover,
-.flex-direction-nav .flex-next:hover {
-	text-decoration: none;
-}
-.flex-direction-nav .flex-prev:hover i,
-.flex-direction-nav .flex-next:hover i {
-	color: #000000;
-}
-.flex-direction-nav a.flex-disabled {
-	opacity: 0;
-}
-
-/************************************************
-11.	Portfolio & Testimonials
-************************************************/
-
-.portfolio-projects,
-.testimonial-posts {
-	width: calc(100% + 24px);
-	margin-left: -12px;
-}
-.portfolio-projects .half:nth-child(2n+1),
-.portfolio-projects .third:nth-child(3n+1),
-.portfolio-projects .fourth:nth-child(4n+1),
-.testimonial-posts .half:nth-child(2n+1),
-.testimonial-posts .third:nth-child(3n+1),
-.testimonial-posts .fourth:nth-child(4n+1),
-.testimonial-posts .fifth:nth-child(5n+1) {
-	clear: both;
-}
-.project,
-.testimonial {
-	margin: 12px;
-	overflow: hidden;
-	border: 1px solid rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-}
-.project .feature-img,
-.testimonial .feature-img {
-	display: block;
-	margin: 0px;
-}
-.jetpack-portfolio .feature-img.banner-img {
-	max-width: 600px;
-	margin-top: 48px;
-	border-bottom: none;
-}
-.project .information,
-.testimonial .information {
-	text-align: center;
-	padding: 12px 18px;
-}
-.project .information h2 {
-	font-size: 1.8em;
-}
-.portfolio-nav {
-	top: 50%;
-	width: 100%;
-	position: absolute;
-	margin: 0px;
-	border: none;
-	z-index: 8;
-}
-.portfolio-nav a {
-	display: block;
-	background-color: #ffffff;
-	font-size: 16px;
-	line-height: 30px;
-	height: 32px;
-	width: 32px;
-	text-decoration: none;
-	margin-top: -16px;
-	opacity: 1;
-	position: absolute;
-	top: 50%;
-	cursor: pointer;
-	overflow: visible;
-	border-radius: 2px;
-}
-.portfolio-nav a i {
-	color: #999999;
-	color: rgba(0, 0, 0, 0.4);
-}
-.portfolio-nav a:hover i {
-	color: #000000;
-}
-.portfolio-nav a span {
-	display: none;
-}
-.portfolio-nav .previous-post a {
-	left: 24px;
-}
-.portfolio-nav .next-post a {
-	right: 24px;
-}
-.testimonials .headline,
-.portfolio .headline {
-	text-align: center;
-}
-.testimonials .post-edit-link,
-.portfolio .post-edit-link {
-	display: none;
-}
-.testimonial p {
-	padding: 12px 0px;
-}
-.testimonial blockquote {
-	margin: 0px;
-	padding: 0px;
-	border: none;
-}
-.testimonial .author {
-	font-style: italic;
-	font-size: 1em;
-	padding-bottom: 12px;
-	opacity: 0.7;
-}
-.testimonial .author::before {
-	content: '— ';
-}
-
-/************************************************
-12.	WordPress Gallery
+10.	WordPress Gallery
 ************************************************/
 
 .gallery {
@@ -1585,7 +1318,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-13.	Sidebar
+11.	Sidebar
 ************************************************/
 
 .sidebar {
@@ -1596,7 +1329,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-14.	Widgets
+12.	Widgets
 ************************************************/
 
 .widget {
@@ -1665,7 +1398,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-15.	RSS Widget
+13.	RSS Widget
 ************************************************/
 
 .widget a.rsswidget {
@@ -1681,7 +1414,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-16.	Calendar Widget
+14.	Calendar Widget
 ************************************************/
 
 #calendar_wrap {
@@ -1720,7 +1453,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-17.	Custom Menu Widget
+15.	Custom Menu Widget
 ************************************************/
 
 .widget ul.menu {
@@ -1793,7 +1526,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-18.	Search Form
+16.	Search Form
 ************************************************/
 
 #searchform {
@@ -1827,7 +1560,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-19.	Footer
+17.	Footer
 ************************************************/
 
 .footer {
@@ -1889,7 +1622,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-20.	Comments
+18.	Comments
 ************************************************/
 
 #comments {
@@ -2019,7 +1752,7 @@ p.logged-in-as {
 }
 
 /************************************************
-21.	Buttons
+19.	Buttons
 ************************************************/
 
 .button, a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, a.more-link, #submit,
@@ -2055,7 +1788,7 @@ p a.more-link {
 }
 
 /************************************************
-22. Columns
+20. Columns
 ************************************************/
 
 .content-columns {
@@ -2118,7 +1851,7 @@ p a.more-link {
 }
 
 /************************************************
-23. Tables
+21. Tables
 ************************************************/
 
 table {
@@ -2157,7 +1890,7 @@ table td {
 }
 
 /************************************************
-24. Forms
+22. Forms
 ************************************************/
 
 form {
@@ -2291,7 +2024,7 @@ button:focus {
 }
 
 /************************************************
-25.	CSS3 Styles
+23.	CSS3 Styles
 ************************************************/
 
 a, button, .button, #submit, #searchsubmit {
@@ -2331,7 +2064,7 @@ a, button, .button, #submit, #searchsubmit {
 }
 
 /************************************************
-26.	Jetpack
+24.	Jetpack
 ************************************************/
 
 .home #infinite-footer {
@@ -2375,7 +2108,7 @@ a, button, .button, #submit, #searchsubmit {
 }
 
 /************************************************
-27.	WordPress Core
+25.	WordPress Core
 ************************************************/
 
 /* Text meant only for screen readers. */
@@ -2419,7 +2152,7 @@ a, button, .button, #submit, #searchsubmit {
 }
 
 /************************************************
-28.	WooCommerce
+26.	WooCommerce
 ************************************************/
 
 /* Gallery Styles */
@@ -2480,7 +2213,7 @@ a, button, .button, #submit, #searchsubmit {
 }
 
 /************************************************
-29.	Organic Widgets
+27.	Organic Widgets
 ************************************************/
 
 .organic-widgets-card h1 a,
@@ -2500,7 +2233,7 @@ a, button, .button, #submit, #searchsubmit {
 }
 
 /************************************************
-30.	Shortcodes
+28.	Shortcodes
 ************************************************/
 
 #wrapper .toggle-trigger, #wrapper .toggle-section, #wrapper .organic-accordion,

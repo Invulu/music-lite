@@ -8,7 +8,7 @@
 
 	/* Sidr Menu ---------------------*/
 	function sidrMenu() {
-		if ($("body.music-logo-right")[0]) {
+		if ($("body.music-lite-logo-right")[0]) {
 			$('#menu-toggle').sidr({
 				name: 'side-menu',
 				side: 'left', // By default
@@ -57,7 +57,7 @@
 	function modifyPosts() {
 
 		/* Toggle Mobile Menu Icon ---------------------*/
-		$('.menu-toggle').click(function() {
+		$('.menu-toggle').on('click touchstart', function() {
 			$('.icon-menu-open').toggle();
 			$('.icon-menu-close').toggle();
 		});
