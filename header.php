@@ -32,19 +32,19 @@
 		<!-- BEGIN #nav-bar -->
 		<div id="nav-bar">
 
-			<?php if ( has_nav_menu( 'social-menu' ) || get_theme_mod( 'music_lite_contact_phone', '941.123.4567' ) || get_theme_mod( 'music_lite_contact_email', 'info@myband.com' ) ) { ?>
+			<?php if ( has_nav_menu( 'social-menu' ) || get_theme_mod( 'music_lite_contact_phone' ) || get_theme_mod( 'music_lite_contact_email' ) ) { ?>
 
 			<!-- BEGIN .row -->
 			<div class="row">
 
-				<?php if ( get_theme_mod( 'music_lite_contact_phone', '941.123.4567' ) || get_theme_mod( 'music_lite_contact_email', 'info@myband.com' ) ) { ?>
+				<?php if ( get_theme_mod( 'music_lite_contact_phone' ) || get_theme_mod( 'music_lite_contact_email' ) ) { ?>
 
 				<div class="contact-info align-left">
-					<?php if ( get_theme_mod('music_lite_contact_phone', '941.123.4567' ) ) { ?>
-						<span><i class="fa fa-phone"></i> &nbsp;<a href="tel:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone', '941.123.4567') ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone', '941.123.4567') ); ?></a></span>
+					<?php if ( get_theme_mod( 'music_lite_contact_phone' ) ) { ?>
+						<span><i class="fa fa-phone"></i> &nbsp;<a href="tel:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone' ) ); ?></a></span>
 					<?php } ?>
-					<?php if ( get_theme_mod('music_lite_contact_email', 'info@myband.com' ) ) { ?>
-						<span><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_email', 'info@myband.com') ); ?>"><?php echo esc_attr( get_theme_mod('music_lite_contact_email', 'info@myband.com') ); ?></a></span>
+					<?php if ( get_theme_mod( 'music_lite_contact_email' ) ) { ?>
+						<span><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_email' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_contact_email' ) ); ?></a></span>
 					<?php } ?>
 				</div>
 

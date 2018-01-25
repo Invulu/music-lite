@@ -1,10 +1,10 @@
 === Music Lite ===
 
-Version: 1.1.3
+Version: 1.1.4
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
-Tested up to: 4.9.1
+Tested up to: 4.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Music Lite is distributed under the terms of the GNU GPL
 * logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 * close.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * menu.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
-* screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
+* screenshot.png: Source: Pixabay, https://pixabay.com/en/concert-singer-singing-stage-2566001/. Licensed under the GPLv2 license. Licensed under Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
 * default-header.jpg: Source: Pixabay, https://pixabay.com/en/guitar-music-band-instrument-1245856/. Licensed under Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
 * image-about.jpg: Source: Pixabay, https://pixabay.com/en/music-silhouette-concert-people-3084876/. License: Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
 * image-blog.jpg: Source: Pixabay, https://pixabay.com/en/drums-set-people-man-concert-2599508/. License: Creative Commons Zero license, https://pixabay.com/en/service/terms/#usage.
@@ -47,6 +47,11 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.1.4 ==
+* Added credit link to screenshot
+* Updated prefix for fonts handle
+* Removed default content for header options
 
 == 1.1.3 ==
 * Updated prefixes throughout theme to 'music-lite'

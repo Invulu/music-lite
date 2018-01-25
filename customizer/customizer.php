@@ -168,7 +168,6 @@ function music_lite_theme_customizer( $wp_customize ) {
 
 		// Contact Email
 		$wp_customize->add_setting( 'music_lite_contact_email', array(
-			'default' => 'info@myband.com',
 			'sanitize_callback' => 'sanitize_email',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_contact_email', array(
@@ -181,7 +180,6 @@ function music_lite_theme_customizer( $wp_customize ) {
 
 		// Contact Phone
 		$wp_customize->add_setting( 'music_lite_contact_phone', array(
-			'default' => '941.123.4567',
 			'sanitize_callback' => 'sanitize_text_field',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'music_lite_contact_phone', array(

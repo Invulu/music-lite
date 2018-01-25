@@ -62,7 +62,7 @@ function music_lite_fonts_url() {
  * @since Music Lite 1.0
  */
 function music_lite_scripts_styles() {
-	wp_enqueue_style( 'music-fonts', music_lite_fonts_url(), array(), null );
+	wp_enqueue_style( 'music-lite-fonts', music_lite_fonts_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'music_lite_scripts_styles' );
 
