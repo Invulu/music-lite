@@ -1,6 +1,6 @@
 === Music Lite ===
 
-Version: 1.1.5
+Version: 1.1.6
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
@@ -47,6 +47,11 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.1.6 ==
+* Fixed bug with footer widgets displaying on home page
+* Fixed background color display in customizer
+* Display custom header for blog on mobile
 
 == 1.1.5 ==
 * Updated theme description with link to demo

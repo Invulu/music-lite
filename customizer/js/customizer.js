@@ -58,4 +58,14 @@
 		} );
 	} );
 
+	/**
+	 * Real-time preview of the site background color.
+	 */
+	wp.customize( 'background_color', function( value ) {
+		value.bind( function( to ) {
+			$( 'body, .post-area' ).css( 'background-color', to );
+			$( '.post-area' ).bgBrightness();
+		} );
+	} );
+
 })( jQuery );

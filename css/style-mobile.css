@@ -219,9 +219,6 @@
 	#custom-header {
 		background-size: cover;
 	}
-	.blog #custom-header {
-		display: none;
-	}
 	#nav-bar .flex-row {
 		display: flex;
 	}
@@ -314,7 +311,7 @@
 		width: calc(100% + 48px);
 		max-width: calc(100% + 48px);
 		margin-left: -24px;
-		padding: 0px;
+		box-sizing: border-box;
 	}
 
 	/* Grid */

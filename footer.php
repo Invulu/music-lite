@@ -12,7 +12,7 @@
 <!-- END .container -->
 </div>
 
-<?php if ( ! is_page_template( 'template-home.php' ) ) { ?>
+<?php if ( ! is_page_template( 'template-home.php' ) && ! is_home() ) { ?>
 
 <!-- BEGIN .footer -->
 <div class="footer">
