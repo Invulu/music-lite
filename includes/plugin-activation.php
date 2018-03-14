@@ -54,11 +54,6 @@ function music_lite_register_required_plugins() {
 			'slug'      => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
 			'required'  => false, // If false, the plugin is only 'recommended' instead of required.
 		),
-		array(
-			'name'      => 'Customize Posts',
-			'slug'      => 'customize-posts',
-			'required'  => false,
-		),
 
 	);
 
