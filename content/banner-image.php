@@ -63,12 +63,16 @@
 
 <?php } ?>
 
-<?php $tour_query = new WP_Query( array( 'post_type' => 'tour-date' ) ); ?>
+<?php if ( function_exists( 'organic_cc_init' ) ) { ?>
 
-<?php if ( is_page_template( 'template-home.php' ) && $tour_query->have_posts() ) { ?>
-	<div class="tour-dates">
-		<div class="flex-row">
-			<?php get_template_part( 'content/loop-tour', 'home' ); ?>
+	<?php $tour_query = new WP_Query( array( 'post_type' => 'tour-date' ) ); ?>
+
+	<?php if ( is_page_template( 'template-home.php' ) && $tour_query->have_posts() ) { ?>
+		<div class="tour-dates">
+			<div class="flex-row">
+				<?php get_template_part( 'content/loop-tour', 'home' ); ?>
+			</div>
 		</div>
-	</div>
+	<?php } ?>
+
 <?php } ?>

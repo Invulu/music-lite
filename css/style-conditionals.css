@@ -272,6 +272,10 @@
 	margin: 0px auto 0px;
 	padding-bottom: 0px;
 }
+.music-lite-not-home-page .custom-logo-link img {
+	max-height: 80px;
+	width: auto;
+}
 .music-lite-logo-center #navigation {
 	display: block;
 	position: relative;

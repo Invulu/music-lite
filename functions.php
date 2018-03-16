@@ -617,7 +617,10 @@ function music_lite_body_class( $classes ) {
 		$classes[] = 'music-lite-has-logo'; }
 
 	if ( is_page_template( 'template-home.php' ) ) {
-		$classes[] = 'music-lite-home-page'; }
+		$classes[] = 'music-lite-home-page'; 
+	} else {
+		$classes[] = 'music-lite-not-home-page';
+	}
 
 	if ( is_page_template( 'template-slideshow.php' ) ) {
 		$classes[] = 'music-lite-slideshow'; }

@@ -239,3 +239,8 @@ function music_lite_customize_preview_js() {
 	wp_enqueue_script( 'music-customizer', get_template_directory_uri() . '/customizer/js/customizer.js', array( 'customize-preview' ), '1.0', true );
 }
 add_action( 'customize_preview_init', 'music_lite_customize_preview_js' );
+
+/**
+ * Logo Resizer
+ */
+require get_template_directory() . '/customizer/logo-resizer.php';

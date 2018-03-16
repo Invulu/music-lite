@@ -1,6 +1,6 @@
 === Music Lite ===
 
-Version: 1.1.7
+Version: 1.1.8
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
@@ -47,6 +47,11 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.1.8 ==
+* Added logo resizer
+* Fixed max width bug with logo
+* Fixed issue with home page template if custom content plugin is not active
 
 == 1.1.7 ==
 * Removed Customize Posts as recommended plugin
