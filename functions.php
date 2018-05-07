@@ -216,6 +216,18 @@ if ( ! function_exists( 'music_lite_enqueue_scripts' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'music_lite_enqueue_scripts' );
 
+if ( ! function_exists( 'music_lite_enqueue_admin_scripts' ) ) {
+
+	/** Function music_lite_enqueue_admin_scripts */
+	function music_lite_enqueue_admin_scripts( $hook ) {
+		if ( 'themes.php' !== $hook ) {
+			return;
+		}
+		wp_enqueue_script( 'music-custom-admin', get_template_directory_uri() . '/js/jquery.custom.admin.js', array( 'jquery' ), '1.0', true );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'music_lite_enqueue_admin_scripts' );
+
 /*
 -------------------------------------------------------------------------------------------------------
 	Admin Notice
@@ -617,7 +629,7 @@ function music_lite_body_class( $classes ) {
 		$classes[] = 'music-lite-has-logo'; }
 
 	if ( is_page_template( 'template-home.php' ) ) {
-		$classes[] = 'music-lite-home-page'; 
+		$classes[] = 'music-lite-home-page';
 	} else {
 		$classes[] = 'music-lite-not-home-page';
 	}
