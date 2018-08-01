@@ -50,7 +50,7 @@ function music_lite_register_required_plugins() {
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Organic Customizer Widgets', // The plugin name.
+			'name'      => 'Organic Builder Widgets', // The plugin name.
 			'slug'      => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
 			'required'  => false, // If false, the plugin is only 'recommended' instead of required.
 		),

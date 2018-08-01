@@ -4,7 +4,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function organic_music_logo_customize_register( $wp_customize ) {
+function music_lite_logo_customize_register( $wp_customize ) {
 	// Logo Resizer additions
 	$wp_customize->add_setting( 'logo_size', array(
 		'default'              => 50,
@@ -16,7 +16,7 @@ function organic_music_logo_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'logo_size', array(
-		'label'       => esc_html__( 'Logo Size', 'organic-music' ),
+		'label'       => esc_html__( 'Logo Size', 'music-lite' ),
 		'section'     => 'title_tagline',
 		'priority'    => 9,
 		'type'        => 'range',
@@ -32,12 +32,12 @@ function organic_music_logo_customize_register( $wp_customize ) {
 		),
 	) );
 }
-add_action( 'customize_register', 'organic_music_logo_customize_register' );
+add_action( 'customize_register', 'music_lite_logo_customize_register' );
 
 /**
  * Add support for logo resizing by filtering `get_custom_logo`
  */
-function organic_music_logo_customize_logo_resize( $html ) {
+function music_lite_logo_customize_logo_resize( $html ) {
 	$size = get_theme_mod( 'logo_size' );
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 	// set the short side minimum
@@ -59,14 +59,14 @@ function organic_music_logo_customize_logo_resize( $html ) {
 
 		// landscape or square
 		if ( $logo['width'] >= $logo['height'] ) {
-			$output = organic_music_logo_min_max( $logo['height'], $logo['width'], $max['height'], $max['width'], $size, $min );
+			$output = music_lite_logo_min_max( $logo['height'], $logo['width'], $max['height'], $max['width'], $size, $min );
 			$img = array(
 				'height'	=> $output['short'],
 				'width'		=> $output['long']
 			);
 		// portrait
 		} else if ( $logo['width'] < $logo['height'] ) {
-			$output = organic_music_logo_min_max( $logo['width'], $logo['height'], $max['width'], $max['height'], $size, $min );
+			$output = music_lite_logo_min_max( $logo['width'], $logo['height'], $max['width'], $max['height'], $size, $min );
 			$img = array(
 				'height'	=> $output['long'],
 				'width'		=> $output['short']
@@ -89,10 +89,10 @@ function organic_music_logo_customize_logo_resize( $html ) {
 
 	return $html;
 }
-add_filter( 'get_custom_logo', 'organic_music_logo_customize_logo_resize' );
+add_filter( 'get_custom_logo', 'music_lite_logo_customize_logo_resize' );
 
 /* Helper function to determine the max size of the logo */
-function organic_music_logo_min_max( $short, $long, $short_max, $long_max, $percent, $min ){
+function music_lite_logo_min_max( $short, $long, $short_max, $long_max, $percent, $min ){
 	$ratio = ( $long / $short );
 	$max['long'] = ( $long_max >= $long ) ? $long : $long_max;
 	$max['short'] = ( $short_max >= ( $max['long'] / $ratio ) ) ? floor( $max['long'] / $ratio ) : $short_max;
@@ -109,33 +109,23 @@ function organic_music_logo_min_max( $short, $long, $short_max, $long_max, $perc
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function organic_music_logo_customize_preview_js() {
-	wp_enqueue_script( 'organic-music-logo-customizer', get_template_directory_uri() . '/customizer/js/logo/customize-preview.js', array( 'jquery', 'customize-preview' ), '201709081119', true );
+function music_lite_logo_customize_preview_js() {
+	wp_enqueue_script( 'music-lite-logo-customizer', get_template_directory_uri() . '/customizer/js/logo/customize-preview.js', array( 'jquery', 'customize-preview' ), '201709081119', true );
 }
-add_action( 'customize_preview_init', 'organic_music_logo_customize_preview_js' );
+add_action( 'customize_preview_init', 'music_lite_logo_customize_preview_js' );
 
 /**
  * JS handlers for Customizer Controls
  */
-function organic_music_logo_customize_controls_js() {
-		wp_enqueue_script( 'organic-music-logo-customizer-controls', get_template_directory_uri() . '/customizer/js/logo/customize-controls.js', array( 'jquery', 'customize-preview' ), '201709071000', true );
+function music_lite_logo_customize_controls_js() {
+		wp_enqueue_script( 'music-lite-logo-customizer-controls', get_template_directory_uri() . '/customizer/js/logo/customize-controls.js', array( 'jquery', 'customize-preview' ), '201709071000', true );
 }
-add_action( 'customize_controls_enqueue_scripts', 'organic_music_logo_customize_controls_js' );
+add_action( 'customize_controls_enqueue_scripts', 'music_lite_logo_customize_controls_js' );
 
 /**
  * Adds CSS to the Customizer controls.
  */
-function organic_music_logo_customize_css() {
+function music_lite_logo_customize_css() {
 	wp_add_inline_style( 'customize-controls', '#customize-control-logo_size input[type=range] { width: 100%; }' );
 }
-add_action( 'customize_controls_enqueue_scripts', 'organic_music_logo_customize_css' );
-
-/**
- * Testing function to remove logo_size theme mod
- */
-function organic_music_logo_remove_theme_mod() {
-	if ( isset( $_GET['remove_logo_size'] ) && 'true' == $_GET['remove_logo_size'] ){
-		set_theme_mod( 'logo_size', '' );
-	}
-}
-add_action( 'wp_loaded', 'organic_music_logo_remove_theme_mod' );
+add_action( 'customize_controls_enqueue_scripts', 'music_lite_logo_customize_css' );

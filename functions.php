@@ -230,6 +230,19 @@ add_action( 'admin_enqueue_scripts', 'music_lite_enqueue_admin_scripts' );
 
 /*
 -------------------------------------------------------------------------------------------------------
+	Admin Support Link
+-------------------------------------------------------------------------------------------------------
+*/
+
+function music_lite_support_link() {
+	global $submenu;
+	$menu_link = esc_url( 'https://organicthemes.com/support/' );
+	$submenu['themes.php'][6] = array( 'Theme Support', 'manage_options', $menu_link, '', 1 );
+}
+add_action( 'admin_menu', 'music_lite_support_link' );
+
+/*
+-------------------------------------------------------------------------------------------------------
 	Admin Notice
 -------------------------------------------------------------------------------------------------------
 */
