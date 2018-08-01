@@ -230,16 +230,23 @@ add_action( 'admin_enqueue_scripts', 'music_lite_enqueue_admin_scripts' );
 
 /*
 -------------------------------------------------------------------------------------------------------
-	Admin Support Link
+	Admin Support and Upgrade Link
 -------------------------------------------------------------------------------------------------------
 */
 
 function music_lite_support_link() {
 	global $submenu;
-	$menu_link = esc_url( 'https://organicthemes.com/support/' );
-	$submenu['themes.php'][6] = array( 'Theme Support', 'manage_options', $menu_link, '', 1 );
+	$support_link = esc_url( 'https://organicthemes.com/support/' );
+	$submenu['themes.php'][6] = array( __( 'Theme Support', 'music-lite' ), 'manage_options', $support_link );
 }
 add_action( 'admin_menu', 'music_lite_support_link' );
+
+function music_lite_upgrade_link() {
+	global $submenu;
+	$upgrade_link = esc_url( 'https://organicthemes.com/theme/music-theme/' );
+	$submenu['themes.php'][7] = array( __( 'Theme Upgrade', 'music-lite' ), 'manage_options', $upgrade_link );
+}
+add_action( 'admin_menu', 'music_lite_upgrade_link' );
 
 /*
 -------------------------------------------------------------------------------------------------------
