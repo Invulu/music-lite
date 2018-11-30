@@ -72,6 +72,6 @@ add_action( 'wp_enqueue_scripts', 'music_lite_scripts_styles' );
  * @since Music Lite 1.0
  */
 function music_lite_editor_styles() {
-	add_editor_style( array( 'css/style-editor.css', music_lite_fonts_url() ) );
+	add_editor_style( array( 'style.css', music_lite_fonts_url() ) );
 }
 add_action( 'after_setup_theme', 'music_lite_editor_styles' );

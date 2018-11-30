@@ -33,6 +33,11 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/*
+		* Enable support for wide alignment class for Gutenberg blocks.
+		*/
+		add_theme_support( 'align-wide' );
+
+		/*
 		* Enable support for post thumbnails.
 		*/
 		add_theme_support( 'post-thumbnails' );
@@ -230,6 +235,27 @@ add_action( 'admin_enqueue_scripts', 'music_lite_enqueue_admin_scripts' );
 
 /*
 -------------------------------------------------------------------------------------------------------
+	Gutenberg Editor Styles
+-------------------------------------------------------------------------------------------------------
+*/
+
+/**
+ * Enqueue WordPress theme styles within Gutenberg.
+ */
+function music_lite_gutenberg_styles() {
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style(
+		'music-lite-gutenberg',
+		get_theme_file_uri( '/css/gutenberg.css' ),
+		false,
+		'1.0',
+		'all'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'music_lite_gutenberg_styles' );
+
+/*
+-------------------------------------------------------------------------------------------------------
 	Admin Support and Upgrade Link
 -------------------------------------------------------------------------------------------------------
 */
@@ -243,7 +269,7 @@ add_action( 'admin_menu', 'music_lite_support_link' );
 
 function music_lite_upgrade_link() {
 	global $submenu;
-	$upgrade_link = esc_url( 'https://organicthemes.com/theme/music-theme/' );
+	$upgrade_link = esc_url( 'https://organicthemes.com/theme/music-theme/?utm_source=lite_upgrade' );
 	$submenu['themes.php'][] = array( __( 'Theme Upgrade', 'music-lite' ), 'manage_options', $upgrade_link );
 }
 add_action( 'admin_menu', 'music_lite_upgrade_link' );
@@ -705,6 +731,12 @@ function music_lite_body_class( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'music-lite-sidebar-1';
+	}
+
+	if ( is_active_sidebar( 'sidebar-1' ) && ! is_page_template( 'template-full.php' ) ) {
+		$classes[] = 'music-sidebar-active';
+	} else {
+		$classes[] = 'music-sidebar-inactive';
 	}
 
 	if ( '' != get_theme_mod( 'background_image' ) ) {

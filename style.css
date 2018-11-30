@@ -2,12 +2,12 @@
 
 	Theme Name: Music Lite
 	Theme URI: https://organicthemes.com/theme/music-lite/
-	Description: A simple and sleek WordPress theme for musicians. Music Lite is the perfect theme for bands, singers, instrumentalists, DJs and musical artists of any type or genre. The theme features the ability to add tour dates, and works seamlessly with the native WordPress audio player. Also, the theme is great for other professionals in the entertainment industry such as comedians, motivational speakers, theatrical performers and more. Additionally, the Organic Customizer Widgets plugin can be used to build pages with custom content sections for displaying albums, band members and more. Demo: (https://organicthemes.com/demo/?demo=music-lite)
+	Description: A simple and sleek WordPress theme for musicians. Music Lite is the perfect theme for bands, singers, instrumentalists, DJs and musical artists of any type or genre. The theme features the ability to add tour dates, and works seamlessly with the native WordPress audio player. Also, the theme is great for other professionals in the entertainment industry such as comedians, motivational speakers, theatrical performers and more. Additionally, the Organic Customizer Widgets plugin can be used to build pages with custom content sections for displaying albums, band members and more. Additionally, the theme is optimized for the WordPress 5.0 Gutenberg content editor. Demo: (https://organicthemes.com/demo/?demo=music-lite)
 	Author: Organic Themes
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.2.2
+	Version: 1.3
 	Text Domain: music-lite
 	Domain Path: /languages/
 	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, threaded-comments, editor-style, theme-options, footer-widgets
@@ -48,6 +48,7 @@
 	26. Woocommerce
 	27. Organic Widgets
 	28. Shortcodes
+	29. Gutenberg
 
 *******************************************************************************************************************/
 
@@ -154,7 +155,8 @@ ul ol li, ul ol ul ol li {
 ol ul li, ol ul ol ul li {
 	list-style-type: square;
 }
-blockquote {
+blockquote,
+blockquote.wp-block-quote {
 	font-size: 130%;
 	margin: 18px 0px;
 	padding: 12px 24px;
@@ -172,7 +174,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-code, pre {
+code, pre, .wp-block-code {
 	background: rgba(0, 0, 0, 0.04);
 	font-family: Courier, sans-serif;
 	font-size: 14px;
@@ -1157,6 +1159,7 @@ body.music-landing-page {
 	margin-bottom: 36px;
 }
 .banner-img img {
+	line-height: 0;
 	margin-left: -9999px;
 }
 .banner-img .headline {
@@ -1196,25 +1199,35 @@ img.hide-img {
 	margin-left: -999em;
 	padding: 0px;
 }
-img.aligncenter {
+img.aligncenter,
+.wp-block-image.aligncenter {
 	display: block;
 	margin: 6px auto 6px;
 	padding: 0px;
 }
-img.alignnone {
+img.alignnone,
+.wp-block-image.alignnone {
 	padding: 0px;
 	margin: 6px 0px;
 	display: inline;
 }
-img.alignright {
+img.alignright,
+.wp-block-image.alignright {
 	padding: 0px;
 	margin: 12px 0px 12px 24px;
 	display: inline;
 }
-img.alignleft {
+img.alignleft,
+.wp-block-image.alignleft {
 	display: inline;
 	padding: 0px;
 	margin: 12px 24px 12px 0px;
+}
+.alignwide, .alignfull {
+	position: relative;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 .aligncenter {
 	display: block;
@@ -1259,57 +1272,44 @@ img.alignleft {
 ************************************************/
 
 .gallery {
-	display: block;
-	text-align: center;
-	clear: both;
-	overflow: hidden;
-	margin: 12px auto 12px;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-}
-.gallery .gallery-row {
-	display:block;
-	clear: both;
-	overflow: hidden;
-	margin: 0;
+	margin: 18px auto 18px !important;
 }
 .gallery .gallery-item {
-	overflow: hidden;
 	float: left;
-	margin: 0;
+	margin-top: 0 !important;
 	text-align: center;
-	list-style: none;
-	padding: 0;
-	position: absolute
-	bottom: 0
+	width: 33%;
+	padding: 6px;
+	box-sizing: border-box;
 }
-.gallery .gallery-item a {
+.gallery-item a {
 	display: block;
+	line-height: 0;
+}
+.gallery img {
+	border: 6px solid rgba(255, 255, 255, 0.4) !important;
 	margin: 6px;
 	padding: 0px;
-	border: none;
-}
-.gallery .gallery-item img,
-.gallery .gallery-item img.thumbnail {
-	display: block;
-	background: #f4f4f4;
-	height: auto;
-	margin: 0 auto;
-	padding: 6px;
-	border: none !important;
 	border-radius: 2px;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
 	transition: all .25s;
 	-moz-transition: all .25s;
 	-webkit-transition: all .25s;
 	-o-transition: all .25s;
 }
-.gallery .gallery-item a:hover img {
-	background: #cc00cc;
+.gallery img:hover {
+	border-color: #ffffff !important;
 }
-.gallery-caption {
-	margin-left: 0;
+.gallery .gallery-caption {
+	font-size: 12px;
+	line-height: 1.65;
+	margin: 2px 0px 6px 0px;
+}
+.gallery dl, .gallery dt {
+	margin: 0px;
+}
+.gallery br+br {
+	display: none;
 }
 
 /************************************************
@@ -1849,7 +1849,8 @@ p a.more-link {
 21. Tables
 ************************************************/
 
-table {
+table,
+table.wp-block-table {
 	width: 100%;
 	margin: 18px 0px;
 	padding: 0px;
@@ -1857,15 +1858,20 @@ table {
 	border-spacing: 0;
 }
 table thead,
-table tfoot {
+table tfoot,
+table.wp-block-table thead,
+table.wp-block-table tfoot {
 	border: 1px solid #dddddd;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 }
 table thead th,
-table tfoot td {
+table tfoot td,
+table.wp-block-table thead th,
+table.wp-block-table tfoot td {
 	border: none;
 }
-table th {
+table th,
+table.wp-block-table th {
 	background: #eeeeee;
 	background: rgba(0, 0, 0, 0.08);
 	font-size: 1.2em;
@@ -1876,12 +1882,23 @@ table th {
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 }
-table td {
+table td,
+table.wp-block-table td {
 	padding: 6px 12px;
 	margin: 0px;
 	border: 1px solid #dddddd;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
+}
+table.wp-block-table.is-style-stripes {
+	border-collapse: collapse;
+}
+table.wp-block-table.is-style-stripes td {
+	border: 1px solid #dddddd;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+}
+table.wp-block-table.is-style-stripes tr:nth-child(2n+1) {
+	background-color: rgba(255, 255, 255, 0.06);
 }
 
 /************************************************
@@ -2263,4 +2280,86 @@ a, button, .button, #submit, #searchsubmit {
 #wrapper .organic-box .box-content h3, #wrapper .organic-box .box-content h4,
 #wrapper .organic-box .box-content h5, #wrapper .organic-box .box-content h6 {
 	color: #333333;
+}
+
+/************************************************
+29. Gutenberg
+************************************************/
+
+div[class*="wp-block"],
+figure[class*="wp-block"],
+blockquote[class*="wp-block"] {
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+.wp-block-image {
+	max-width: none;
+	margin: 32px auto;
+	padding: 0px;
+}
+.wp-block-image .aligncenter,
+.wp-block-image .alignleft,
+.wp-block-image .alignright,
+.wp-block-image.is-resized {
+	display: inline;
+}
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image.is-resized > figcaption {
+	display: block;
+}
+.wp-block-gallery .blocks-gallery-item {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+}
+.wp-block-gallery .blocks-gallery-image {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	box-sizing: border-box;
+}
+.wp-block-cover,
+.wp-block-cover-image {
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+.wp-block-cover-image.has-background-dim,
+.wp-block-cover-image.has-background-dim h2 {
+	color: #ffffff;
+}
+.wp-block-button {
+	position: relative;
+	text-align: center;
+	box-sizing: border-box;
+}
+.wp-block-button.alignwide a {
+	display: block;
+	position: relative;
+}
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	padding-left: 18px;
+	border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+.wp-block-quote__citation,
+.wp-block-quote cite,
+.wp-block-quote footer {
+	display: block;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 0.85rem;
+	margin-top: 12px;
+}
+.wp-block-quote cite::before,
+.wp-block-quote footer::before {
+	content: '— '
+}
+.wp-block-audio {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.wp-block-audio audio {
+	width: 100%;
 }

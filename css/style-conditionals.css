@@ -184,18 +184,20 @@
 .music-lite-bg-dark .headline {
 	color: #ffffff;
 }
-.music-lite-bg-dark, .music-lite-bg-dark p, .music-lite-bg-dark blockquote {
+.music-lite-bg-dark, .music-lite-bg-dark p, .music-lite-bg-dark figcaption,
+.music-lite-bg-dark cite, .music-lite-bg-dark blockquote {
 	color: rgba(255, 255, 255, 0.8);
 }
 .music-lite-bg-dark blockquote {
-	border-color: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1) !important;
 }
 .music-lite-bg-light h1, .music-lite-bg-light h2, .music-lite-bg-light h3,
 .music-lite-bg-light h4, .music-lite-bg-light h5, .music-lite-bg-light h6,
+.music-lite-bg-dark .wp-block-organic-profile-block h3,
 .music-lite-bg-light .headline {
 	color: #000000;
 }
-.music-lite-bg-light, .music-lite-bg-light p, .music-lite-bg-light blockquote {
+.music-lite-bg-light, .music-lite-bg-light p, .music-lite-bg-light cite, .music-lite-bg-light blockquote, .music-lite-bg-dark .wp-block-organic-profile-block p {
 	color: rgba(0, 0, 0, 0.6);
 }
 .music-lite-bg-light blockquote {
@@ -294,6 +296,20 @@
 }
 .music-lite-desc-inactive #masthead {
 	display: none;
+}
+.page.music-sidebar-inactive .alignfull,
+.single.music-sidebar-inactive .alignfull {
+	width: 100vw;
+	left: calc(-50vw + 50%);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.page.music-sidebar-inactive .alignwide,
+.single.music-sidebar-inactive .alignwide {
+	width: calc(100% + 120px);
+	left: -60px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 /* Elements */

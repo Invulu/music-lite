@@ -1,10 +1,10 @@
 === Music Lite ===
 
-Version: 1.2.2
+Version: 1.3
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
-Tested up to: 4.9.2
+Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,16 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.3 ==
+* Gutenberg optimization updates
+* Fixed issue with header video not working on home template
+* Updated flexslider.js script
+* Updated recommended plugins
+* Allow date range to be displayed
+* Past tour dates now display
+* Conditional style fixes
+* General cleanup
 
 == 1.2.2 ==
 * Fixed issue of custom admin submenu link overwriting other links
