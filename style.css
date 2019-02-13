@@ -7,7 +7,7 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.3
+	Version: 1.3.1
 	Text Domain: music-lite
 	Domain Path: /languages/
 	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, threaded-comments, editor-style, theme-options, footer-widgets
@@ -1200,28 +1200,29 @@ img.hide-img {
 	padding: 0px;
 }
 img.aligncenter,
-.wp-block-image.aligncenter {
-	display: block;
-	margin: 6px auto 6px;
+.wp-block-image.aligncenter,
+.wp-block-image .aligncenter {
+	text-align: center;
+	margin: 16px auto;
 	padding: 0px;
 }
 img.alignnone,
-.wp-block-image.alignnone {
+.wp-block-image.alignnone,
+.wp-block-image .alignnone {
+	margin: 16px 0px;
 	padding: 0px;
-	margin: 6px 0px;
-	display: inline;
 }
 img.alignright,
-.wp-block-image.alignright {
+.wp-block-image.alignright,
+.wp-block-image .alignright {
+	margin: 16px 0px 16px 24px;
 	padding: 0px;
-	margin: 12px 0px 12px 24px;
-	display: inline;
 }
 img.alignleft,
-.wp-block-image.alignleft {
-	display: inline;
+.wp-block-image.alignleft,
+.wp-block-image .alignleft {
+	margin: 16px 24px 16px 0px;
 	padding: 0px;
-	margin: 12px 24px 12px 0px;
 }
 .alignwide, .alignfull {
 	position: relative;
@@ -2297,21 +2298,11 @@ blockquote[class*="wp-block"] {
 	margin: 32px auto;
 	padding: 0px;
 }
-.wp-block-image .aligncenter,
-.wp-block-image .alignleft,
-.wp-block-image .alignright,
-.wp-block-image.is-resized {
-	display: inline;
-}
-.wp-block-image .aligncenter > figcaption,
-.wp-block-image .alignleft > figcaption,
-.wp-block-image .alignright > figcaption,
-.wp-block-image.is-resized > figcaption {
-	display: block;
+.wp-block-embed {
+	margin-left: auto;
+	margin-right: auto;
 }
 .wp-block-gallery .blocks-gallery-item {
-	margin-left: 0px;
-	margin-right: 0px;
 	padding: 0px;
 }
 .wp-block-gallery .blocks-gallery-image {
@@ -2327,9 +2318,11 @@ blockquote[class*="wp-block"] {
 	margin-top: 32px;
 	margin-bottom: 32px;
 }
-.wp-block-cover-image.has-background-dim,
-.wp-block-cover-image.has-background-dim h2 {
-	color: #ffffff;
+.wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover .wp-block-cover-text,
+.wp-block-cover h2, .wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2 {
+	color: #ffffff !important;
 }
 .wp-block-button {
 	position: relative;
