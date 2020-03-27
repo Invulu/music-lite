@@ -297,19 +297,35 @@
 .music-lite-desc-inactive #masthead {
 	display: none;
 }
-.page.music-sidebar-inactive .alignfull,
-.single.music-sidebar-inactive .alignfull {
+.music-lite-singular.music-lite-sidebar-inactive .alignfull {
 	width: 100vw;
 	left: calc(-50vw + 50%);
 	margin-left: 0px;
 	margin-right: 0px;
 }
-.page.music-sidebar-inactive .alignwide,
-.single.music-sidebar-inactive .alignwide {
+.music-lite-singular.music-lite-sidebar-inactive .alignwide {
 	width: calc(100% + 120px);
 	left: -60px;
 	margin-left: 0px;
 	margin-right: 0px;
+}
+.music-lite-sidebar-inactive.music-lite-singular .alignfull .alignfull,
+.music-lite-sidebar-inactive.music-lite-singular .alignwide .alignwide,
+.music-lite-sidebar-inactive.music-lite-singular .alignfull .alignwide,
+.music-lite-sidebar-inactive.music-lite-singular .alignwide .alignfull {
+	max-width: 100%;
+	left: auto;
+}
+.music-lite-sidebar-inactive.music-lite-singular .wp-block-columns.alignwide {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.music-lite-sidebar-inactive.music-lite-singular .wp-block-columns.alignfull {
+	padding-left: 36px;
+	padding-right: 36px;
+}
+.music-lite-sidebar-inactive.music-lite-singular .headline {
+	text-align: center;
 }
 
 /* Elements */

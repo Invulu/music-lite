@@ -54,6 +54,24 @@
 
 	}
 
+	/* BG Brightness Detection ---------------------*/
+	function brightnessSetup() {
+		if ( $('.banner-img').length ) {
+			$('.banner-img').bgBrightness();
+		}
+		if ( $('.wp-custom-header').length ) {
+			$('.wp-custom-header').bgBrightness();
+		}
+		if ( $('.post-area').length ) {
+			$('.post-area').bgBrightness();
+		}
+		if ( $('.sidebar').length ) {
+			$('.sidebar').bgBrightness();
+		}
+		$('#nav-bar').bgBrightness();
+		$('.footer').bgBrightness();
+	}
+
 	function modifyPosts() {
 
 		/* Toggle Mobile Menu Icon ---------------------*/
@@ -74,30 +92,13 @@
 		/* Fit Vids ---------------------*/
 		$('.content').fitVids();
 
-		/* Check Element BG Brightness ---------------------*/
-		$('#nav-bar').bgBrightness();
-		if ( $('.banner-img').length ) {
-			$('.banner-img').bgBrightness();
-		}
-		if ( $('.wp-custom-header').length ) {
-			$('.wp-custom-header').bgBrightness();
-		}
-		if ( $('.post-area').length ) {
-			$('.post-area').bgBrightness();
-		}
-		if ( $('.sidebar').length ) {
-			$('.sidebar').bgBrightness();
-		}
-		if ( $('.footer').length ) {
-			$('.footer').bgBrightness();
-		}
-
 	}
 
 	$( document )
 	.ready( removeNoJsClass )
 	.ready( sidrMenu )
 	.ready( menuOffset )
+	.ready( brightnessSetup )
 	.ready( modifyPosts )
 	.on( 'post-load', modifyPosts );
 

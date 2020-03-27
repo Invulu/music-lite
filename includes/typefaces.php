@@ -20,9 +20,9 @@ function music_lite_fonts_url() {
 	* into your own language.
 	*/
 
-	$roboto = _x( 'on', 'Roboto font: on or off', 'music-lite' );
+	$roboto     = _x( 'on', 'Roboto font: on or off', 'music-lite' );
 	$montserrat = _x( 'on', 'Montserrat font: on or off', 'music-lite' );
-	$anton = _x( 'on', 'Anton font: on or off', 'music-lite' );
+	$anton      = _x( 'on', 'Anton font: on or off', 'music-lite' );
 	$noto_serif = _x( 'on', 'Noto Serif font: on or off', 'music-lite' );
 
 	if ( 'off' !== $roboto || 'off' !== $montserrat || 'off' !== $anton || 'off' !== $noto_serif ) {
@@ -46,8 +46,8 @@ function music_lite_fonts_url() {
 		}
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => rawurlencode( implode( '|', $font_families ) ),
+			'subset' => rawurlencode( 'latin,latin-ext' ),
 		);
 
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -62,7 +62,7 @@ function music_lite_fonts_url() {
  * @since Music Lite 1.0
  */
 function music_lite_scripts_styles() {
-	wp_enqueue_style( 'music-lite-fonts', music_lite_fonts_url(), array(), null );
+	wp_enqueue_style( 'music-lite-fonts', music_lite_fonts_url(), array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'music_lite_scripts_styles' );
 
@@ -75,3 +75,16 @@ function music_lite_editor_styles() {
 	add_editor_style( array( 'style.css', music_lite_fonts_url() ) );
 }
 add_action( 'after_setup_theme', 'music_lite_editor_styles' );
+
+if ( ! function_exists( 'music_lite_block_editor_styles' ) ) {
+
+	/**
+	 * Add Google Scripts for use with the block editor
+	 *
+	 * @since Music Lite 1.0
+	 */
+	function music_lite_block_editor_styles() {
+		wp_enqueue_style( 'music-lite-fonts', music_lite_fonts_url(), array(), '1.0' );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'music_lite_block_editor_styles' );

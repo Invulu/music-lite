@@ -1,10 +1,10 @@
 === Music Lite ===
 
-Version: 1.3.4
+Version: 1.4
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
-Tested up to: 5.0
+Tested up to: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,23 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.4 ==
+* Gutenberg style updates
+* Added Gutenberg editor styles
+* Enqueued Font Awesome in block editor
+* Enqueued Google Fonts in block editor
+* General cleanup
+
+== 1.3.6 ==
+* Fixed error related to previous update
+
+== 1.3.5 ==
+* Updated image brightness detection JS
+* Changed enqueue name for brightness script
+* Additional brightness script fixes for WP 5.3
+* Updated admin notice
+* General cleanup
 
 == 1.3.4 ==
 * Fixed classic editor text color issue

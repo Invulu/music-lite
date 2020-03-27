@@ -313,10 +313,10 @@
 		margin-left: -24px;
 		box-sizing: border-box;
 	}
-	.page.music-sidebar-inactive .alignfull,
-	.single.music-sidebar-inactive .alignfull,
-	.page.music-sidebar-inactive .alignwide,
-	.single.music-sidebar-inactive .alignwide {
+	.page.music-lite-sidebar-inactive .alignfull,
+	.single.music-lite-sidebar-inactive .alignfull,
+	.page.music-lite-sidebar-inactive .alignwide,
+	.single.music-lite-sidebar-inactive .alignwide {
 		width: calc(100% + 48px);
 		left: -24px;
 		margin-left: 0px;
