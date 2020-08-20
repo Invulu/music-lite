@@ -30,7 +30,7 @@
 
 				<?php if ( '' != get_theme_mod( 'music_lite_home_link', '' ) && get_theme_mod( 'music_lite_home_link', '' ) ) { ?>
 					<div class="align-center text-center">
-						<a class="button" href="<?php echo esc_url( get_theme_mod( 'music_lite_home_link', '' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_home_link_text', 'Learn More' ) ); ?></a>
+						<a class="button" href="<?php echo esc_url( get_theme_mod( 'music_lite_home_link', '' ) ); ?>"><?php echo esc_html( get_theme_mod( 'music_lite_home_link_text', 'Learn More' ) ); ?></a>
 					</div>
 				<?php } ?>
 

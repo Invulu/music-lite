@@ -1,10 +1,9 @@
 === Music Lite ===
 
-Version: 1.4.1
+Version: 1.4.3
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
-Tested up to: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +46,17 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.4.3 ==
+* Updated escaping in header.php
+* Updated escaping in banner-image.php
+
+== 1.4.2 ==
+* Gutenberg updates
+* Added new stylesheet tags
+* Better handling of plugin recommendation
+* Updated attribute escaping in footer
+* Added wp_body_open action in header.php
 
 == 1.4.1 ==
 * Reverted Gutenberg editor background to white
@@ -135,7 +145,7 @@ Music Lite is distributed under the terms of the GNU GPL
 
 == 1.1.3 ==
 * Updated prefixes throughout theme to 'music-lite'
-* Replaced Unsplash images with Pixabay
+* Replaced default images with Pixabay
 * Fixed missing escaping for get_theme_mod
 * Removed sticky post tag
 * Added editor style separately

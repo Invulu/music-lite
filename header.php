@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php wp_body_open(); ?>
+
 <!-- BEGIN #wrapper -->
 <div id="wrapper">
 
@@ -41,10 +43,10 @@
 
 				<div class="contact-info align-left">
 					<?php if ( get_theme_mod( 'music_lite_contact_phone' ) ) { ?>
-						<span><i class="fa fa-phone"></i> &nbsp;<a href="tel:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone' ) ); ?></a></span>
+						<span><i class="fa fa-phone"></i> &nbsp;<a href="tel:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_phone' ) ); ?>"><?php echo esc_html( get_theme_mod( 'music_lite_contact_phone' ) ); ?></a></span>
 					<?php } ?>
 					<?php if ( get_theme_mod( 'music_lite_contact_email' ) ) { ?>
-						<span><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_email' ) ); ?>"><?php echo esc_attr( get_theme_mod( 'music_lite_contact_email' ) ); ?></a></span>
+						<span><i class="fa fa-envelope"></i> &nbsp;<a href="mailto:<?php echo esc_attr( get_theme_mod( 'music_lite_contact_email' ) ); ?>"><?php echo esc_html( get_theme_mod( 'music_lite_contact_email' ) ); ?></a></span>
 					<?php } ?>
 				</div>
 

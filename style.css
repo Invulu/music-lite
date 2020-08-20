@@ -7,7 +7,9 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.4.1
+	Version: 1.4.3
+	Tested up to: 5.5
+	Requires PHP: 5.3.29
 	Text Domain: music-lite
 	Domain Path: /languages/
 	Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, threaded-comments, editor-style, theme-options, footer-widgets
@@ -2302,6 +2304,7 @@ a, button, .button, #submit, #searchsubmit {
 /* Media */
 
 .wp-block-image {
+	text-align: center;
 	max-width: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -2326,6 +2329,9 @@ a, button, .button, #submit, #searchsubmit {
 	box-sizing: border-box;
 	border: none;
 }
+.wp-block-cover {
+	box-sizing: border-box;
+}
 .wp-block-cover.alignfull,
 .wp-block-cover-image.alignfull,
 .wp-block-cover .wp-block-button,
@@ -2336,6 +2342,9 @@ a, button, .button, #submit, #searchsubmit {
 .wp-block-cover .wp-block-cover__inner-container {
 	padding: 36px;
 	box-sizing: border-box;
+}
+.wp-block-column .wp-block-cover .wp-block-cover__inner-container {
+	padding: 0px;
 }
 .wp-block-cover .wp-block-cover__inner-container p {
 	margin-top: 24px;
@@ -2380,26 +2389,26 @@ a, button, .button, #submit, #searchsubmit {
 	float: none;
 	text-align: right;
 }
-.wp-block-button.alignwide a {
+.wp-block-button.alignwide .wp-block-button__link {
 	display: block;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link {
+.wp-block-button.is-style-outline .wp-block-button__link {
 	background: inherit;
 	box-shadow: none;
 	text-shadow: none;
 	border-color: inherit;
 	border-width: inherit;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link:not(.has-text-color) {
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 	color: inherit;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link:hover {
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: inherit;
 	background: inherit;
 	border-width: inherit;
 	border-color: inherit;
 }
-.has-background-dim .wp-block-button.is-style-outline a:hover {
+.has-background-dim .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -2423,50 +2432,56 @@ a, button, .button, #submit, #searchsubmit {
 	opacity: 0.6;
 }
 .wp-block-pullquote {
-	position: relative;
+	display: block;
 	margin: 36px 0px 24px;
 	padding: 36px;
-	border-top: 2px solid #dddddd;
-	border-bottom: 2px solid #dddddd;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-color: #dddddd;
 }
-.wp-block-pullquote p {
-	font-style: italic;
-}
-.wp-block-pullquote::before {
+.wp-block-pullquote blockquote::before {
 	position: absolute;
-	top: -28px; left: 50%;
+	top: -64px; left: 50%;
 	background: #ffffff;
 	color: rgba(0, 0, 0, 0.4);
 	content: '\f10d';
 	font-family: 'FontAwesome';
 	font-size: 24px;
+	text-align: center;
 	width: 48px;
 	height: 48px;
 	line-height: 48px;
 	margin-left: -24px;
 	border-radius: 50%;
-	border: 2px solid #dddddd;
+	border-width: 2px;
+	border-style: solid;
+	border-color: inherit;
 }
 .wp-block-pullquote.is-style-solid-color {
 	padding-left: 48px;
 }
-.wp-block-pullquote.is-style-solid-color::before {
-	left: 0px;
-	top: 36px;
+.wp-block-pullquote.is-style-solid-color blockquote::before {
+	left: -48px;
+	top: 0px;
 }
 .wp-block-pullquote.is-style-solid-color blockquote {
 	max-width: none;
 }
 .wp-block-pullquote blockquote {
+	position: relative;
 	margin: 0px;
 	padding: 0px;
 	border: none;
 }
 .wp-block-pullquote blockquote p {
+	color: inherit;
 	margin-bottom: 12px;
 }
 .wp-block-pullquote blockquote cite,
 .wp-block-pullquote .wp-block-pullquote__citation {
+	color: inherit;
 	font-size: 90%;
 	font-style: normal;
 	text-transform: uppercase;

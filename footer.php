@@ -52,7 +52,7 @@
 
 				<div class="align-center">
 
-					<p><?php esc_html_e( 'Copyright', 'music-lite' ); ?> &copy; <?php echo date( esc_html__( 'Y', 'music-lite' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'music-lite' ); ?> &middot; <?php esc_html( bloginfo( 'name' ) ); ?></p>
+					<p><?php esc_html_e( 'Copyright', 'music-lite' ); ?> &copy; <?php echo esc_html( date( 'Y' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'music-lite' ); ?> &middot; <?php esc_html( bloginfo( 'name' ) ); ?></p>
 
 					<p><?php printf( esc_html__( '%1$s by %2$s', 'music-lite' ), 'Music Lite', '<a href="http://organicthemes.com/">Organic Themes</a>' ); ?></p>
 
