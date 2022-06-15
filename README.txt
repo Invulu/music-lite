@@ -1,6 +1,6 @@
 === Music Lite ===
 
-Version: 1.4.3
+Version: 1.5
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.8
@@ -46,6 +46,14 @@ Music Lite is distributed under the terms of the GNU GPL
 * jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
 
 == Changelog ==
+
+== 1.5 ==
+* Updated Gutenberg styles
+* Updated Font Awesome
+* Added new social media icons
+* Added new Gutenberg functions
+* Updated admin notification
+* Updated plugin activation class
 
 == 1.4.3 ==
 * Updated escaping in header.php

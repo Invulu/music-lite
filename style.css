@@ -7,8 +7,8 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.4.3
-	Tested up to: 5.5
+	Version: 1.5
+	Tested up to: 6.0
 	Requires PHP: 5.3.29
 	Text Domain: music-lite
 	Domain Path: /languages/
@@ -650,7 +650,11 @@ ul.menu li li:hover ul {
 
 /*** ARROWS **/
 .menu li.menu-item-has-children > a::after {
-	font-family: 'FontAwesome';
+	position: relative;
+	top: -2px;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 10px;
 	content: '\f107';
 	margin-left: 6px;
 }
@@ -658,6 +662,7 @@ ul.menu li li:hover ul {
 	position: absolute;
 	content: '\f105';
 	right: 12px;
+	top: 16px;
 }
 
 /************************************************
@@ -1049,36 +1054,52 @@ body.music-landing-page {
 	background: rgba(255, 255, 255, 0.24);
 }
 .social-icons li a::before {
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
 	font-size: 16px;
-	font-weight: normal;
 	content: '\f0c1';
 }
 .social-icons li a span {
 	display: none;
 }
-.social-icons li a[href*="facebook.com"]::before		{ content: '\f09a'; }
-.social-icons li a[href*="twitter.com"]::before 		{ content: '\f099'; }
-.social-icons li a[href*="plus.google.com"]::before 	{ content: '\f0d5'; }
-.social-icons li a[href*="linkedin.com"]::before	 	{ content: '\f0e1'; }
-.social-icons li a[href*="github.com"]::before		 	{ content: '\f113'; }
-.social-icons li a[href*="dribbble.com"]::before		{ content: '\f17d'; }
-.social-icons li a[href*="foursquare.com"]::before		{ content: '\f180'; }
-.social-icons li a[href*="pinterest.com"]::before		{ content: '\f0d2'; }
-.social-icons li a[href*="wordpress.com"]::before		{ content: '\f19a'; }
-.social-icons li a[href*="youtube.com"]::before			{ content: '\f16a'; }
-.social-icons li a[href*="vine.co"]::before				{ content: '\f1ca'; }
-.social-icons li a[href*="instagram.com"]::before		{ content: '\f16d'; }
-.social-icons li a[href*="stackexchange.com"]::before	{ content: '\f18d'; }
-.social-icons li a[href*="spotify.com"]::before			{ content: '\f1bc'; }
-.social-icons li a[href*="soundcloud.com"]::before			{ content: '\f1be'; }
-.social-icons li a[href*="last.fm"]::before			{ content: '\f202'; }
-.social-icons li a[href*="amazon.com"]::before			{ content: '\f270'; }
-.social-icons li a[href*="flickr.com"]::before			{ content: '\f16e'; }
-.social-icons li a[href*="vimeo.com"]::before			{ content: '\f27d'; }
-.social-icons li a[href*="yelp.com"]::before			{ content: '\f1e9'; }
-.social-icons li a[href*="mailto:"]::before				{ content: '\f0e0'; }
-.social-icons li a[href$="/feed/"]::before				{ content: '\f09e'; }
+.social-icons li a[href*="bandcamp.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f2d5'; }
+.social-icons li a[href*="soundcloud.com"]::before    { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1be'; }
+.social-icons li a[href*="reddit.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f281'; }
+.social-icons li a[href*="twitch.tv"]::before         { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1e8'; }
+.social-icons li a[href*="snapchat.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f2ac'; }
+.social-icons li a[href*="medium.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f23a'; }
+.social-icons li a[href*="tumblr.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f173'; }
+.social-icons li a[href*="apple.com"]::before         { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f179'; }
+.social-icons li a[href*="etsy.com"]::before          { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f2d7'; }
+.social-icons li a[href*="facebook.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f09a'; }
+.social-icons li a[href*="twitter.com"]::before       { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f099'; }
+.social-icons li a[href*="google.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1a0'; }
+.social-icons li a[href*="linkedin.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f0e1'; }
+.social-icons li a[href*="github.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f113'; }
+.social-icons li a[href*="dribbble.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f17d'; }
+.social-icons li a[href*="foursquare.com"]::before    { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f180'; }
+.social-icons li a[href*="pinterest.com"]::before     { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f0d2'; }
+.social-icons li a[href*="wordpress.com"]::before     { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f19a'; }
+.social-icons li a[href*="youtube.com"]::before       { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f167'; }
+.social-icons li a[href*="vine.co"]::before           { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1ca'; }
+.social-icons li a[href*="instagram.com"]::before     { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f16d'; }
+.social-icons li a[href*="stackexchange.com"]::before { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f18d'; }
+.social-icons li a[href*="spotify.com"]::before       { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1bc'; }
+.social-icons li a[href*="amazon.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f270'; }
+.social-icons li a[href*="flickr.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f16e'; }
+.social-icons li a[href*="vimeo.com"]::before         { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f27d'; }
+.social-icons li a[href*="yelp.com"]::before          { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f1e9'; }
+.social-icons li a[href*="imdb.com"]::before          { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f2d8'; }
+.social-icons li a[href*="tiktok.com"]::before        { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\e07b'; }
+.social-icons li a[href*="wa.me"]::before,
+.social-icons li a[href*="whatsapp.com"]::before      { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f232'; }
+.social-icons li a[href*="m.me"]::before,
+.social-icons li a[href*="messenger.com"]::before     { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f39f'; }
+.social-icons li a[href*="t.me"]::before,
+.social-icons li a[href*="telegram.org"]::before     { font-family: 'Font Awesome 5 Brands'; font-weight: 400; content: '\f3fe'; }
+.social-icons li a[href*="mailto:"]::before           { content: '\f0e0'; }
+.social-icons li a[href*="tel:"]::before              { content: '\f095'; }
+.social-icons li a[href$="/feed/"]::before            { content: '\f09e'; }
 
 /************************************************
 8.	Pagination
@@ -2313,6 +2334,9 @@ a, button, .button, #submit, #searchsubmit {
 .wp-block-image img {
 	display: block;
 }
+.wp-block-image figcaption {
+	margin-top: 8px;
+}
 .wp-block-embed {
 	margin-left: auto;
 	margin-right: auto;
@@ -2396,8 +2420,6 @@ a, button, .button, #submit, #searchsubmit {
 	background: inherit;
 	box-shadow: none;
 	text-shadow: none;
-	border-color: inherit;
-	border-width: inherit;
 }
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 	color: inherit;
@@ -2405,10 +2427,11 @@ a, button, .button, #submit, #searchsubmit {
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: inherit;
 	background: inherit;
-	border-width: inherit;
-	border-color: inherit;
 }
-.has-background-dim .wp-block-button.is-style-outline .wp-block-button__link:hover {
+.wp-block-button__link.has-text-color:hover {
+	color: initial;
+}
+.has-background-dim .wp-block-button.is-style-outline .wp-block-button__link {
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -2416,11 +2439,38 @@ a, button, .button, #submit, #searchsubmit {
 /* Quotes */
 
 .wp-block-quote.is-style-large p {
-	font-size: 160%;
+	font-size: 1.8rem;
+	font-style: normal;
 	line-height: 1.5;
+	margin: 0px;
 }
-.wp-block-quote.is-style-large.has-text-align-center cite {
+.wp-block-quote.has-text-align-right,
+.wp-block-quote.has-text-align-center {
+	border-left: none;
+}
+.wp-block-quote.has-text-align-right {
+	border-right: 2px solid #dddddd;
+}
+.wp-block-quote.has-text-align-center {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.wp-block-quote.has-text-align-center::before {
+	display: inline-block;
+	content: '';
+	width: 80px;
+	height: 2px;
+	background: #dddddd;
+	margin: 12px auto;
+}
+.wp-block-quote.has-text-align-center cite {
 	text-align: center;
+}
+.wp-block-quote.has-text-align-left cite {
+	text-align: left;
+}
+.wp-block-quote.has-text-align-right cite {
+	text-align: right;
 }
 .wp-block-quote__citation,
 .wp-block-quote cite,
@@ -2432,7 +2482,7 @@ a, button, .button, #submit, #searchsubmit {
 	opacity: 0.6;
 }
 .wp-block-pullquote {
-	display: block;
+	position: relative;
 	margin: 36px 0px 24px;
 	padding: 36px;
 	border-top-width: 2px;
@@ -2441,15 +2491,15 @@ a, button, .button, #submit, #searchsubmit {
 	border-bottom-style: solid;
 	border-color: #dddddd;
 }
-.wp-block-pullquote blockquote::before {
+.wp-block-pullquote::before {
 	position: absolute;
-	top: -64px; left: 50%;
+	top: -28px; left: 50%;
 	background: #ffffff;
 	color: rgba(0, 0, 0, 0.4);
 	content: '\f10d';
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
 	font-size: 24px;
-	text-align: center;
 	width: 48px;
 	height: 48px;
 	line-height: 48px;
@@ -2462,39 +2512,35 @@ a, button, .button, #submit, #searchsubmit {
 .wp-block-pullquote.is-style-solid-color {
 	padding-left: 48px;
 }
-.wp-block-pullquote.is-style-solid-color blockquote::before {
-	left: -48px;
-	top: 0px;
+.wp-block-pullquote.is-style-solid-color::before {
+	left: 0px;
+	top: 36px;
 }
 .wp-block-pullquote.is-style-solid-color blockquote {
 	max-width: none;
 }
 .wp-block-pullquote blockquote {
-	position: relative;
 	margin: 0px;
 	padding: 0px;
 	border: none;
 }
-.wp-block-pullquote blockquote p {
-	color: inherit;
-	margin-bottom: 12px;
-}
 .wp-block-pullquote blockquote cite,
-.wp-block-pullquote .wp-block-pullquote__citation {
+.wp-block-pullquote blockquote .wp-block-pullquote__citation {
+	display: block;
 	color: inherit;
 	font-size: 90%;
 	font-style: normal;
 	text-transform: uppercase;
+	margin-top: 12px;
 	opacity: 0.6;
 }
 
 /* Columns */
 
 .wp-block-columns {
-	margin-bottom: 0px;
+	display: flex;
 	box-sizing: border-box;
 }
-.wp-block-columns.alignwide,
 .wp-block-columns.alignfull {
 	padding-left: 36px;
 	padding-right: 36px;
@@ -2525,14 +2571,16 @@ div[class*="wp-block"] form.contact-form .contact-submit {
 }
 .wp-block-jetpack-email::before {
 	color: #999999;
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
 	font-size: 90%;
 	content: '\f0e0';
 	margin-right: 8px;
 }
 .wp-block-jetpack-phone::before {
 	color: #999999;
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
 	content: '\f095';
 	margin-right: 8px;
 }
@@ -2549,6 +2597,13 @@ div[class*="wp-block"] form.contact-form .contact-submit {
 	padding: 0px;
 }
 
+/* CoBlocks */
+
+.wpnbha.is-style-borders.is-grid article,
+.wp-block-coblocks-pricing-table-item {
+	box-sizing: border-box;
+}
+
 /* Misc */
 
 .wp-block-table {
@@ -2559,6 +2614,9 @@ div[class*="wp-block"] form.contact-form .contact-submit {
 }
 .wp-block-table.is-style-stripes {
 	border-bottom: none;
+}
+.wp-block-table figcaption {
+	margin-top: -24px;
 }
 .wp-block-audio {
 	margin-left: 0px;
@@ -2583,7 +2641,4 @@ div[class*="wp-block"] form.contact-form .contact-submit {
 }
 .wp-block-social-links .wp-social-link a {
 	color: inherit;
-}
-.post-area > .alignfull:first-child {
-	margin-top: 0px;
 }

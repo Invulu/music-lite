@@ -48,11 +48,6 @@ function music_lite_register_required_plugins() {
 			'slug'     => 'organic-custom-content',
 			'required' => true,
 		),
-		array(
-			'name'     => 'Profile Block',
-			'slug'     => 'organic-profile-block',
-			'required' => false,
-		),
 		( ! ( class_exists( 'Organic_Widgets_Pro' ) || class_exists( 'Organic_Widgets' ) ) ? array(
 			'name'     => 'Organic Builder Widgets',
 			'slug'     => 'organic-customizer-widgets',

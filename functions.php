@@ -52,6 +52,29 @@ if ( ! function_exists( 'music_lite_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
+		* Enable support for responsive embed blocks.
+		*/
+		add_theme_support( 'responsive-embeds' );
+
+		/*
+		* Enable support for block styles.
+		*/
+		add_theme_support( 'wp-block-styles' );
+
+		/*
+		* Enable support for HTML5 output.
+		*/
+		add_theme_support(
+			'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
+
+		/*
 		* Enable support for custom logo.
 		*/
 		add_theme_support(
@@ -124,7 +147,7 @@ if ( ! function_exists( 'music_lite_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'music-lite-style', get_stylesheet_uri(), '', '1.0' );
 		wp_enqueue_style( 'music-lite-style-conditionals', get_template_directory_uri() . '/css/style-conditionals.css', array( 'music-lite-style' ), '1.0' );
 		wp_enqueue_style( 'music-lite-style-mobile', get_template_directory_uri() . '/css/style-mobile.css', array( 'music-lite-style' ), '1.0' );
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'music-lite-style' ), '1.0' );
+		wp_enqueue_style( 'music-lite-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'music-lite-style' ), '5.15.2' );
 
 		// Resgister Scripts.
 		wp_register_script( 'jquery-sidr', get_template_directory_uri() . '/js/jquery.sidr.js', array( 'jquery' ), '1.0', true );
@@ -174,10 +197,10 @@ function music_lite_gutenberg_styles() {
 		'all'
 	);
 	wp_enqueue_style(
-		'font-awesome',
+		'music-lite-font-awesome',
 		get_template_directory_uri() . '/css/font-awesome.css',
 		array( 'music-lite-gutenberg' ),
-		'1.0'
+		'5.15.2'
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'music_lite_gutenberg_styles' );
@@ -208,80 +231,28 @@ add_action( 'admin_menu', 'music_lite_upgrade_link' );
 -------------------------------------------------------------------------------------------------------
 */
 
-/** Function music_lite_admin_notice_follow */
-function music_lite_admin_notice_follow() {
-	if ( ! PAnD::is_admin_notice_active( 'notice-music-lite-30' ) ) {
+/** Function music_lite_admin_notice_discount */
+function music_lite_admin_notice_discount() {
+	if ( ! PAnD::is_admin_notice_active( 'notice-music-lite-discount-30' ) ) {
 		return;
 	}
 	?>
 
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=246727095428680";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<div data-dismissible="notice-music-lite-discount-30" class="notice updated is-dismissible">
 
-	<script>window.twttr = (function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0],
-		t = window.twttr || {};
-		if (d.getElementById(id)) return t;
-		js = d.createElement(s);
-		js.id = id;
-		js.src = "https://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js, fjs);
-
-		t._e = [];
-		t.ready = function(f) {
-			t._e.push(f);
-		};
-
-		return t;
-	}(document, "script", "twitter-wjs"));</script>
-
-	<div data-dismissible="notice-music-lite-30" class="notice updated is-dismissible">
-
-		<p><?php printf( __( 'Enter your email to receive updates and information from <a href="%1$s" target="_blank">Organic Themes</a>. Upgrade to <a href="%2$s" target="_blank">premium version</a> for more options and support.', 'music-lite' ), 'https://organicthemes.com/themes/', 'https://organicthemes.com/theme/music-theme/' ); ?></p>
-
-		<div class="follows" style="overflow: hidden; margin-bottom: 12px;">
-
-			<div id="mc_embed_signup" class="clear" style="float: left;">
-				<form action="//organicthemes.us1.list-manage.com/subscribe/post?u=7cf6b005868eab70f031dc806&amp;id=c3cce2fac0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<div id="mc_embed_signup_scroll">
-						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="display:none"></div>
-							<div class="response" id="mce-success-response" style="display:none"></div>
-						</div>
-						<div class="mc-field-group" style="float: left;">
-							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-						</div>
-						<div style="float: left; margin-left: 6px;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7cf6b005868eab70f031dc806_c3cce2fac0" tabindex="-1" value=""></div>
-					</div>
-				</form>
-			</div>
-
-			<div class="social-links" style="float: left; margin-left: 24px; margin-top: 4px;">
-				<div class="fb-like" style="float: left;" data-href="https://www.facebook.com/OrganicThemes/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-				<div class="twitter-follow" style="float: left; margin-left: 6px;"><a class="twitter-follow-button" href="https://twitter.com/OrganicThemes" data-show-count="false">Follow @OrganicThemes</a></div>
-			</div>
-
-		</div>
+		<p><?php printf( wp_kses_post( '🍍 Aloha! Mahalo for using Music Lite. We would like to extend a <b>20&#37; discount</b> towards our <a href="%1$s" target="_blank">Blocks Bundle Plugin</a> or any <a href="%2$s" target="_blank">Organic Themes Membership</a>. Just enter the coupon code "LITEUP20" during checkout.', 'music-lite' ), 'https://organicthemes.com/blocks/', 'https://organicthemes.com/pricing/' ); ?></p>
+		<p><b><?php esc_html_e( '&mdash; David Morgan', 'music-lite' ); ?></b><br/>
+		<b><?php printf( wp_kses_post( 'Co-founder of <a href="%1$s" target="_blank">Organic Themes</a>', 'music-lite' ), 'https://organicthemes.com/' ); ?></b></p>
 
 	</div>
 
-	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-	<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-	<!--End mc_embed_signup-->
 	<?php
 }
 
 add_action( 'admin_init', array( 'PAnD', 'init' ) );
-add_action( 'admin_notices', 'music_lite_admin_notice_follow', 10 );
+add_action( 'admin_notices', 'music_lite_admin_notice_discount', 10 );
 
-require get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php';
+require( get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php' );
 
 /*
 -------------------------------------------------------------------------------------------------------
